@@ -13,4 +13,13 @@
         android:text="@string/nulo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombreBanda"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Button" />
+
 </RelativeLayout>
