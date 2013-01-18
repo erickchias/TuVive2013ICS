@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bandasTodas">
+    	<item>a band of bitches</item>
+		<item>aiken</item>
+		<item>alex anwandter</item>
+		<item>apolo</item> 
+		<item>arianna puello</item> 
+		<item>armando palomas</item>
+		<item>arreola + carballo</item>
+		<item>balkanbeats</item>
+		<item>banda de turistas</item>
+		<item>bengala</item>
+		<item>blur</item>
+		<item>bomba estéreo</item>
+		<item>bosnian rainbows</item>
+		<item>cabo san roque</item>
+		<item>camila moreno</item>
+		<item>carla morrison</item>
+		<item>celso piña</item>
+		<item>centavrvs</item>
+		<item>chicha libre</item>
+		<item>chico trujillo</item>
+		<item>comisario pantera</item>
+		<item>corizonas</item>
+		<item>dapuntobeat</item>
+		<item>dardo</item>
+		<item>división minúscula</item> 
+		<item>dorian</item>
+		<item>dread mar i</item>
+		<item>el cuarteto de nos</item> 
+		<item>él mató a un policía motorizado</item> 
+		<item>el tri</item>
+		<item>esteman</item>
+		<item>enjambre</item>
+		<item>faltosos</item>
+		<item>fenómeno fuzz</item>
+		<item>flip tamez</item>
+		<item>fobia</item>
+		<item>françois peglau</item>
+		<item>franny glass</item>
+		<item>garrobos</item>
+		<item>gepe</item>
+		<item>golden ganga</item> 
+		<item>here comes the kraken</item> 
+		<item>inclanfunk</item>
+		<item>japandroids</item>
+		<item>jenny and the mexicats</item> 
+		<item>jovanotti</item>
+		<item>juan cirerol</item>
+		<item>kchiporros</item>
+		<item>la banderville</item>
+		<item>lazcano malo</item>
+		<item>le baron</item>
+		<item>leider</item>
+		<item>liber terán</item>
+		<item>los aguas aguas</item>
+		<item>los amigos invisibles</item>
+		<item>los cuchillos</item>
+		<item>los daniels</item>
+		<item>los fabulosos cadillacs</item> 
+		<item>los auténticos decadentes</item>
+		<item>los jaigüey</item>
+		<item>los macuanos</item>
+		<item>los punsetes</item>
+		<item>los viejos</item>
+		<item>love of lesbian</item>
+		<item>mala rodrí­guez</item>
+		<item>max capote</item>
+		<item>mompox</item>
+		<item>monsieur periné</item>
+		<item>morrissey</item>
+		<item>mostro</item>
+		<item>motor</item>
+		<item>nabuzenko</item>
+		<item>naftalina</item>
+		<item>negros vivos</item>
+		<item>nortec collective presents: bostich + fussible</item> 
+		<item>ocean’s acoustic</item>
+		<item>odisseo</item>
+		<item>ondatrópica</item>
+		<item>orka</item>
+		<item>orquesta garash</item> 
+		<item>panteón rococó</item>
+		<item>pegasvs</item>
+		<item>pez diablo</item>
+		<item>porter</item>
+		<item>puerto candelaria</item>
+		<item>quinto sol</item>
+		<item>radio kaos</item>
+		<item>rarefolk</item>
+		<item>real de catorce</item> 
+		<item>renoh</item>
+		<item>románticos de zacatecas</item> 
+		<item>salón victoria</item>
+		<item>seward</item>
+		<item>silversun pickups</item> 
+		<item>ska-p</item>
+		<item>sonido changorama</item> 
+		<item>sonido gallo negro</item>
+		<item>sonido landon</item>
+		<item>soziedad alkoholika</item>
+		<item>split heaven</item>
+		<item>señor loop</item>
+		<item>sussie 4</item>
+		<item>tame impala</item>
+		<item>tex tex</item>
+		<item>the dragulas</item>
+		<item>tío gus</item>
+		<item>twin tones</item>
+		<item>ulises hadjis</item>
+		<item>vía rústica</item>
+		<item>violadores del verso</item> 
+		<item>underworld</item>
+		<item>volcán</item>
+		<item>yeah yeah yeahs</item>
+		<item>yokozuna</item>
+		<item>!deladap</item>
+    </string-array>
+    <string-array name="bandasJueves">
+        <item>centavrvs</item>
+		<item>enjambre</item>
+		<item>morrissey</item>
+		<item>pegasvs</item>
+    </string-array>
+    <string-array name="bandasViernes">
+    	<item>apolo</item>
+		<item>armando palomas</item>
+		<item>benagala</item>
+		<item>bosnian rainsbows</item>
+		<item>comisario pantera</item>
+		<item>garrobos</item>
+		<item>golden ganga</item>
+		<item>here comes the kraken</item>
+		<item>japandroid</item>
+		<item>juan cirerol</item>
+		<item>los amigos invisibles</item>
+		<item>los auténticos decadentes</item>
+		<item>los jaigüey</item>
+		<item>los punsetes</item>
+		<item>love of lesbian</item>
+		<item>porter</item>
+		<item>radio kaos</item>
+		<item>soziedad alkoholika</item>
+		<item>text text</item>
+		<item>underworld</item>
+		<item>volcán</item>
+		<item>yeah yeah yeahs</item>
+		<item>!deladap</item>
+    </string-array>
+    <string-array name="bandasSabado">
+        <item>a band of bitches</item>
+		<item>alex anwandter</item>
+		<item>banda de turistas</item>
+		<item>blur</item>
+		<item>carla morrison</item>
+		<item>corizonas</item>
+		<item>rapuntobeat</item>
+		<item>división minúscula</item>
+		<item>dread mar i</item>
+		<item>el tri</item>
+		<item>flip tamez</item>
+		<item>fobia</item>
+		<item>franny glass</item>
+		<item>kchiporros</item>
+		<item>los daniels</item>
+		<item>los macuanos</item>
+		<item>mala rodríguez</item>
+		<item>negros vivos</item>
+		<item>orquesta garash</item>
+		<item>panteón rococó</item>
+		<item>puerto candelaria</item>
+		<item>quinto sol</item>
+		<item>románticos de zacatecas</item>
+		<item>sonido gallo negro</item>
+		<item>sussie 4</item>
+		<item>tame impala</item>
+		<item>violadores del verso</item>
+		<item>yokozuna</item>
+    </string-array>
+    <string-array name="bandasDomingo">
+        <item>arreola + carballo</item>
+		<item>balkanbeats</item>
+		<item>bomba estéreo</item>
+		<item>celso piña</item>
+		<item>chicha libre</item>
+		<item>chico trujillo</item>
+		<item>dorian</item>
+		<item>el cuarteto de nos</item>
+		<item>él mató a un policía motorizado</item>
+		<item>faltosos</item>
+		<item>gepe</item>
+		<item>javanotti</item>
+		<item>lazcano malo</item>
+		<item>le baron</item>
+		<item>leider</item>
+		<item>liber terán</item>
+		<item>los cuchillos</item>
+		<item>los fabulosos cadillacs</item>
+		<item>los viejos</item>
+		<item>monsieur periné</item>
+		<item>naftalina</item>
+		<item>nortec collective presents: bostich + fussible</item>
+		<item>ondatrópica</item>
+		<item>real de catorce</item>
+		<item>renoh</item>
+		<item>silversun pickups</item>
+		<item>ska-p</item>
+		<item>spli heaven</item>
+		<item>twin tones</item>
+    </string-array>
+</resources>
