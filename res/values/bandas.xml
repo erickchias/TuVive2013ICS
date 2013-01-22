@@ -144,21 +144,31 @@
 		<item>benagala</item>
 		<item>bosnian rainsbows</item>
 		<item>comisario pantera</item>
+		<item>dardo</item>
+		<item>françois peglau</item>
 		<item>garrobos</item>
 		<item>golden ganga</item>
 		<item>here comes the kraken</item>
 		<item>japandroid</item>
+		<item>jenny and the mexicats</item> 
 		<item>juan cirerol</item>
 		<item>los amigos invisibles</item>
 		<item>los auténticos decadentes</item>
 		<item>los jaigüey</item>
 		<item>los punsetes</item>
 		<item>love of lesbian</item>
+		<item>mostro</item>
+		<item>ocean’s acoustic</item>
 		<item>porter</item>
 		<item>radio kaos</item>
+		<item>salón victoria</item>
+		<item>seward</item>
 		<item>soziedad alkoholika</item>
 		<item>text text</item>
+		<item>the dragulas</item>
+		<item>tío gus</item>
 		<item>underworld</item>
+		<item>vía rústica</item>
 		<item>volcán</item>
 		<item>yeah yeah yeahs</item>
 		<item>!deladap</item>
@@ -166,11 +176,12 @@
     <string-array name="bandasSabado">
         <item>a band of bitches</item>
 		<item>alex anwandter</item>
+		<item>arianna puello</item>
 		<item>banda de turistas</item>
 		<item>blur</item>
 		<item>carla morrison</item>
 		<item>corizonas</item>
-		<item>rapuntobeat</item>
+		<item>dapuntobeat</item>
 		<item>división minúscula</item>
 		<item>dread mar i</item>
 		<item>el tri</item>
@@ -178,22 +189,31 @@
 		<item>fobia</item>
 		<item>franny glass</item>
 		<item>kchiporros</item>
+		<item>la banderville</item>
 		<item>los daniels</item>
 		<item>los macuanos</item>
 		<item>mala rodríguez</item>
+		<item>mompox</item>
 		<item>negros vivos</item>
+		<item>odisseo</item>
+		<item>orka</item>
 		<item>orquesta garash</item>
 		<item>panteón rococó</item>
+		<item>pez diablo</item>
 		<item>puerto candelaria</item>
 		<item>quinto sol</item>
 		<item>románticos de zacatecas</item>
 		<item>sonido gallo negro</item>
+		<item>sonido landon</item>
+		<item>señor loop</item>
 		<item>sussie 4</item>
 		<item>tame impala</item>
+		<item>ulises hadjis</item>
 		<item>violadores del verso</item>
 		<item>yokozuna</item>
     </string-array>
     <string-array name="bandasDomingo">
+        <item>aiken</item>
         <item>arreola + carballo</item>
 		<item>balkanbeats</item>
 		<item>bomba estéreo</item>
@@ -203,17 +223,24 @@
 		<item>dorian</item>
 		<item>el cuarteto de nos</item>
 		<item>él mató a un policía motorizado</item>
+		<item>esteman</item>
 		<item>faltosos</item>
+		<item>fenómeno fuzz</item>
+		<item>inclanfunk</item>
 		<item>gepe</item>
 		<item>javanotti</item>
 		<item>lazcano malo</item>
 		<item>le baron</item>
 		<item>leider</item>
 		<item>liber terán</item>
+		<item>los aguas aguas</item>
 		<item>los cuchillos</item>
 		<item>los fabulosos cadillacs</item>
 		<item>los viejos</item>
+		<item>max capote</item>
 		<item>monsieur periné</item>
+		<item>motor</item>
+		<item>nabuzenko</item>
 		<item>naftalina</item>
 		<item>nortec collective presents: bostich + fussible</item>
 		<item>ondatrópica</item>
@@ -221,6 +248,7 @@
 		<item>renoh</item>
 		<item>silversun pickups</item>
 		<item>ska-p</item>
+		<item>sonido changorama</item>
 		<item>spli heaven</item>
 		<item>twin tones</item>
 		<item>xoel lópez</item>
