@@ -128,7 +128,13 @@
     </string-array>
     <string-array name="bandasJueves">
         <item>centavrvs</item>
-		<item>enjambre</item>
+		<item>Enjambre|Jueves|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
+		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
+		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
+		    del publico y ya no tan solo en el ambito "indie" si no tambien difundida en medios de comunicacion masiva.
+		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
+		       </item>
 		<item>morrissey</item>
 		<item>pegasvs</item>
     </string-array>
