@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="bandasTodas">
-    	<item>a band of bitches</item>
+    	<item>
+    	    A Band Of Bitches|Sabado|fusion de rock, hip hop, grupero.|El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh).
+    	    Es segun el propio Jonas un disco conceptual que aborda la tematica del 2012, una mezcla sobre aliens, mayas,la conspiracion, el fin del mundo etc.
+    	    Su disco debut "The pre end of the world soundtrack" ya esta disponible en itunes, aunque la version fisica estara disponible hasta septiembre con una edicion limitada diseñado a mano.
+    	    Se hacen llamar A Band of Bitches y según su biografía son una sociedad secreta que quiere tomar el control del orden mundial, al escuchar el disco uno piensa que fue hecho por aliens, 
+    	    se dice también que es el proyecto solista de Jonas de Plastilina Mosh.
+    	    |En su pagina de facebook enlistan influencias como:
+    	     Jesus
+    	     Napoleon Bonaparte
+    	     Atila el huno
+    	     Fidel Castro
+    	     Rasputin etc... 
+    	</item>
 		<item>aiken</item>
 		<item>alex anwandter</item>
 		<item>apolo</item> 
@@ -36,7 +48,14 @@
 		<item>él mató a un policía motorizado</item> 
 		<item>el tri</item>
 		<item>esteman</item>
-		<item>enjambre</item>
+		<item>
+		    Enjambre|Jueves|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
+		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
+		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
+		    del publico y ya no tan solo en el ambito "indie" si no tambien difundida en medios de comunicacion masiva.
+		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
+		</item>
 		<item>faltosos</item>
 		<item>fenómeno fuzz</item>
 		<item>flip tamez</item>
@@ -174,7 +193,20 @@
 		<item>!deladap</item>
     </string-array>
     <string-array name="bandasSabado">
-        <item>a band of bitches</item>
+        <item>
+    	    A Band Of Bitches |Sabado |Fusion de rock, hip hop, grupero |El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh)
+    	    Es segun el propio Jonas un disco conceptual que aborda la tematica del 2012, una mezcla sobre aliens, mayas,la conspiracion, el fin del mundo etc.
+    	    Su disco debut "The pre end of the world soundtrack" ya esta disponible en itunes, aunque la version fisica estara disponible hasta septiembre con una edicion limitada diseñado a mano.
+    	    Se hacen llamar A Band of Bitches y según su biografía son una sociedad secreta que quiere tomar el control del orden mundial, al escuchar el disco uno piensa que fue hecho por aliens, 
+    	    se dice también que es el proyecto solista de Jonas de Plastilina Mosh.
+    	    |En su pagina de facebook enlistan influencias como:
+    	     Jesus
+    	     Napoleon Bonaparte
+    	     Atila el huno
+    	     Fidel Castro
+    	     Rasputin 
+    	     etc.
+    	</item>
 		<item>alex anwandter</item>
 		<item>arianna puello</item>
 		<item>banda de turistas</item>
