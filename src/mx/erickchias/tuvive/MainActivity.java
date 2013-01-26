@@ -1,3 +1,10 @@
+/*
+* (c) 2013
+* Aplicación NO oficial para el festival Vive Latino 2013.
+* La intención de esta aplicación no es otra mas que proveer información con respecto a las bandas 
+* que se presentaran en el evento, sus horarios e información en general de interes del mismo festival.
+*/
+
 package mx.erickchias.tuvive;
 
 import android.app.ActionBar;
@@ -12,11 +19,8 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends FragmentActivity implements
-		ActionBar.TabListener {
-
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 	SectionsPagerAdapter mSectionsPagerAdapter;
-
 	ViewPager mViewPager;
 
 	@Override
@@ -26,22 +30,17 @@ public class MainActivity extends FragmentActivity implements
 
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
-
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
+		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+			@Override
+			public void onPageSelected(int position) {
+					actionBar.setSelectedNavigationItem(position);
+			}
+		});
 
-		mViewPager
-				.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-					@Override
-					public void onPageSelected(int position) {
-						actionBar.setSelectedNavigationItem(position);
-					}
-				});
-
-		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+		for(int i=0;i<mSectionsPagerAdapter.getCount();i++) {
 			actionBar.addTab(actionBar.newTab()
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
