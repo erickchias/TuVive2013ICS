@@ -16,7 +16,12 @@
     	</item>
 		<item>aiken</item>
 		<item>alex anwandter</item>
-		<item>apolo</item> 
+		<item>
+    	    Apolo|Viernes|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
+    	    Con un sonido fuerte y energico, planean seguir visitando la republica y algunas partes de america latina en este 2013 para promover su trabajo y sonido.
+    	    Con canciones fuertes como guajura y lobo estepario esta banda llego desde chihuahua para mostrar lo que pueden hacer.
+    	    |"Viviendo en chihuahua la gente prefiere las canciones en ingles que en español", es lo que ellos dicen, fue el motivo por el cual salir de chihuahua a buscar suerte en monterrey, durante dos años permanecieron ahi para despues emigrar al DF a tener una mejor oportunidad.
+    	</item> 
 		<item>arianna puello</item> 
 		<item>armando palomas</item>
 		<item>arreola + carballo</item>
@@ -206,7 +211,12 @@
 		</item>
     </string-array>
     <string-array name="bandasViernes">
-    	<item>apolo</item>
+    	<item>
+    	    Apolo|Viernes|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
+    	    Con un sonido fuerte y energico, planean seguir visitando la republica y algunas partes de america latina en este 2013 para promover su trabajo y sonido.
+    	    Con canciones fuertes como guajura y lobo estepario esta banda llego desde chihuahua para mostrar lo que pueden hacer.
+    	    |"Viviendo en chihuahua la gente prefiere las canciones en ingles que en español", es lo que ellos dicen, fue el motivo por el cual salir de chihuahua a buscar suerte en monterrey, durante dos años permanecieron ahi para despues emigrar al DF a tener una mejor oportunidad.
+    	</item>
 		<item>armando palomas</item>
 		<item>benagala</item>
 		<item>bosnian rainsbows</item>
