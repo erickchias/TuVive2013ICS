@@ -19,7 +19,7 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		setContentView(R.layout.activity_lugar);
 		GoogleMap map = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 		 CameraUpdate camUpd1 =
-				    CameraUpdateFactory.newLatLng(new LatLng(40.41, -3.69));
+				    CameraUpdateFactory.newLatLng(new LatLng(19.403783,-99.090607));
 				 
 				map.moveCamera(camUpd1);
 	}
