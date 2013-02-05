@@ -26,11 +26,19 @@ public class BandaActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_banda);
 		
+		
+		
 		inicio = Calendar.getInstance();
 		fin = Calendar.getInstance();
 		
 		 bundle=getIntent().getExtras();
-		 TextView banda = (TextView)findViewById(R.id.nombreBanda);
+		 TextView banda = (TextView)findViewById(R.id.textView2);
+		 TextView dia = (TextView)findViewById(R.id.textView1);
+		 TextView ritmo = (TextView)findViewById(R.id.textView3);
+		 TextView info = (TextView)findViewById(R.id.textView4);
+		 TextView mas = (TextView)findViewById(R.id.textView5);
+		 
+		 
 		 escenario="Foro Sol - Rojo";
 		 switch(Integer.parseInt(bundle.getString("array"))){
 		 case 0: values=getResources().getStringArray(R.array.bandasTodas);
@@ -40,6 +48,15 @@ public class BandaActivity extends Activity {
 		 		String[] domingo =getResources().getStringArray(R.array.bandasDomingo);
 		 		
 		 		String nombreBanda = values[Integer.parseInt(bundle.getString("pos"))];
+				String[]s_values=nombreBanda.split("\\|");
+				String name=s_values[0].toString();
+				
+		 		super.setTitle(name);
+		 		dia.setText(s_values[1].toString());
+		 		ritmo.setText(s_values[2].toString());
+		 		info.setText(s_values[3].toString());
+		 		mas.setText(s_values[4].toString());
+		 		
 		 		for(int i=0;i<jueves.length;i++){
 		 			if(nombreBanda.equals(jueves[i].toString())){
 		 				inicio.set(2013, 2, 14,7,30);
@@ -78,6 +95,15 @@ public class BandaActivity extends Activity {
 			fin.set(2013, 2, 15,8,30);
 		 break;
 		 case 3: values=getResources().getStringArray(R.array.bandasSabado);
+		  		nombreBanda = values[Integer.parseInt(bundle.getString("pos"))];
+		  		s_values=nombreBanda.split("\\|");
+		  		name=s_values[0].toString();
+			
+	 		super.setTitle(name);
+	 		dia.setText(s_values[1].toString());
+	 		ritmo.setText(s_values[2].toString());
+	 		info.setText(s_values[3].toString());
+	 		mas.setText(s_values[4].toString());
 		 inicio.set(2013, 2, 16,7,30);
 			fin.set(2013, 2, 16,8,30);
 		 break;
@@ -88,7 +114,7 @@ public class BandaActivity extends Activity {
 		 }
 
 		 
-		 banda.setText(values[Integer.parseInt(bundle.getString("pos"))]);
+		 //banda.setText(values[Integer.parseInt(bundle.getString("pos"))]);
 		 Button bt = (Button)findViewById(R.id.button1);
 		 bt.setOnClickListener(new View.OnClickListener() {
 	            public void onClick(View arg0){

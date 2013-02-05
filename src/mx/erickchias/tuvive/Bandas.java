@@ -21,8 +21,14 @@ public class Bandas extends ListFragment {
 	    super.onActivityCreated(savedInstanceState);
         
 		 String[] values =getResources().getStringArray(R.array.bandasTodas);
+		 String[] names=new String[values.length];
+		 for(int i=0;i<values.length;i++){
+			 String txt=values[i].toString();
+			 String[]s_values=txt.split("\\|");
+			 names[i]=s_values[0].toString();
+		 }
 			    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-			        android.R.layout.simple_list_item_1	,values);
+			        android.R.layout.simple_list_item_1	,names);
 			    setListAdapter(adapter);
 			  
 

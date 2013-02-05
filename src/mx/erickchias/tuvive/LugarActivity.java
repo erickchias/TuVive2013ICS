@@ -5,6 +5,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
 import android.os.Bundle;
@@ -18,10 +19,24 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lugar);
 		GoogleMap map = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
-		 CameraUpdate camUpd1 =
-				    CameraUpdateFactory.newLatLng(new LatLng(19.403783,-99.090607));
-				 
-				map.moveCamera(camUpd1);
+		
+		LatLng foro = new LatLng(19.4051145,-99.0956126);
+		CameraPosition camPos = new CameraPosition.Builder()
+		        .target(foro)   
+		        .zoom(15)       
+		        .bearing(90)    
+		        .tilt(90)
+		        .build();
+		 
+		CameraUpdate camUpd3 =
+		    CameraUpdateFactory.newCameraPosition(camPos);
+		 
+		map.setMapType(map.MAP_TYPE_HYBRID);
+		map.animateCamera(camUpd3);
+		
+		//CameraUpdate camUpd1 =CameraUpdateFactory.newLatLng(new LatLng(37.0625,-95.677068));
+		//map.moveCamera(camUpd1);
+				
 	}
 
 	@Override
