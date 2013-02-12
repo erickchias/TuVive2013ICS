@@ -20,14 +20,17 @@ public class Domingo extends ListFragment {
 	  public void onActivityCreated(Bundle savedInstanceState) {
 	    super.onActivityCreated(savedInstanceState);
         
-		 String[] values =getResources().getStringArray(R.array.bandasDomingo);
+	    String[] values =getResources().getStringArray(R.array.bandasDomingo);
+		 String[] names=new String[values.length];
+		 for(int i=0;i<values.length;i++){
+			 String txt=values[i].toString();
+			 String[]s_values=txt.split("\\|");
+			 names[i]=s_values[0].toString();
+		 }
 			    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-			        android.R.layout.simple_list_item_1	,values);
+			        android.R.layout.simple_list_item_1	,names);
 			    setListAdapter(adapter);
-			  
-
-			 
-		
+			    
         setHasOptionsMenu(true);
        // return view;
     }
@@ -44,10 +47,10 @@ public class Domingo extends ListFragment {
 	
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        mItem = menu.add("Por día");
+        mItem = menu.add("Todas");
        // mItem.setIcon(android.R.drawable.ic_menu_info_details);
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        Intent info = new Intent(getActivity(), PorDiaActivity.class );
+        Intent info = new Intent(getActivity(), Bandas.class );
         mItem.setIntent(info);
         
         mItem =menu.add("Mis bandas");

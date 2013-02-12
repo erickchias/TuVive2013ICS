@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class BandaActivity extends Activity {
+public class SabadoBandaActivity extends Activity {
 	private String[] values;
 	Bundle bundle;
 	Calendar inicio; 
@@ -41,12 +41,8 @@ public class BandaActivity extends Activity {
 		TextView mas = (TextView)findViewById(R.id.mas);
 		 
 
-		values=getResources().getStringArray(R.array.bandasTodas);
-					String[] jueves =getResources().getStringArray(R.array.bandasJueves);
-			 		String[] viernes =getResources().getStringArray(R.array.bandasViernes);
-			 		String[] sabado =getResources().getStringArray(R.array.bandasSabado);
-			 		String[] domingo =getResources().getStringArray(R.array.bandasDomingo);
-		 		
+		values=getResources().getStringArray(R.array.bandasSabado);
+			 	
 			 		String nombreBanda = values[Integer.parseInt(bundle.getString("pos"))];
 					String[]s_values=nombreBanda.split("\\|");
 					name=s_values[0].toString();
@@ -65,21 +61,10 @@ public class BandaActivity extends Activity {
 	 				String end=s_values[3].toString();
 	 				String[] array_start=start.split("\\:");
 	 				String[] array_end=end.split("\\:");
-	 				
-	 				if(s_values[1].equals("Jueves")){
-	 					inicio.set(2013, 2, 14,Integer.parseInt(array_start[0].toString()),Integer.parseInt(array_start[1].toString()));
-		 				fin.set(2013, 2, 14,Integer.parseInt(array_end[0].toString()),Integer.parseInt(array_end[1].toString()));	
-	 				}else if(s_values[1].equals("Viernes")){
-	 					inicio.set(2013, 2, 15,Integer.parseInt(array_start[0].toString()),Integer.parseInt(array_start[1].toString()));
-		 				fin.set(2013, 2, 15,Integer.parseInt(array_end[0].toString()),Integer.parseInt(array_end[1].toString()));
-	 				}else if(s_values[1].equals("Sábado")){
+	 			
 	 					inicio.set(2013, 2, 16,Integer.parseInt(array_start[0].toString()),Integer.parseInt(array_start[1].toString()));
 		 				fin.set(2013, 2, 16,Integer.parseInt(array_end[0].toString()),Integer.parseInt(array_end[1].toString()));
-	 				}else if(s_values[1].equals("Domingo")){
-	 					inicio.set(2013, 2, 17,Integer.parseInt(array_start[0].toString()),Integer.parseInt(array_start[1].toString()));
-		 				fin.set(2013, 2, 17,Integer.parseInt(array_end[0].toString()),Integer.parseInt(array_end[1].toString()));
-	 				}
-			 		
+	 				
 			 		
 		 Button bt = (Button)findViewById(R.id.button1);
 		 bt.setOnClickListener(new View.OnClickListener() {

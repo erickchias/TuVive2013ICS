@@ -10,7 +10,9 @@ import com.google.android.gms.maps.model.LatLng;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class LugarActivity extends android.support.v4.app.FragmentActivity {
 
@@ -44,5 +46,18 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		getMenuInflater().inflate(R.menu.activity_lugar, menu);
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.menu_about:
+	        	Intent acerca = new Intent(this, AcercaActivity.class );
+	        	startActivity(acerca);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}	
 
 }

@@ -14,7 +14,17 @@
     <string name="dia2">viernes 15</string>
     <string name="dia3">sábado 16</string>
     <string name="dia4">domingo 17</string>
+    <string name="acerca">
+<![CDATA[
+        	<html>
+ 			<head></head>
+ 			<body style="text-align:justify;color:white;background-color:#000000;">
+ 				<p>Tu Vive 2013 es una aplicaci&oacute;n NO oficial con fines &uacute;nicamente informativos para el Festival Vive Latino 2013. Toda la informaci&oacute;n aqu&iacute; mostrada es de dominio p&uacute;blico, la aplicaci&oacute;n no tiene otra intenci&oacute;n m&aacute;s que hacer llegar la informaci&oacute;n a los asistentes e interesados en este evento.</p> <br>Creditos: <ul><li>Erick Chias (@erickchias)</li><li>Divani Fuentes (@Divarolas)</li></ul><p>Si te gusta nuestro trabajo puedes comprarnos una cerveza :)</p>
 
+ 			</body>
+			</html>
+		]]>
+    </string>
     <!-- Tabs -->
     <string name="tab1">EVENTO</string>
     <string name="tab2">BANDAS</string>
@@ -45,5 +55,6 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section1">Section 1</string>
     <string name="title_activity_por_dia">Bandas por día</string>
+    <string name="title_activity_tips">Tips</string>
 
 </resources>

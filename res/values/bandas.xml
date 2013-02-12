@@ -2,72 +2,68 @@
 <resources>
     <string-array name="bandasTodas">
     	<item>
-    	    A Band Of Bitches|Sabado|fusion de rock, hip hop, grupero.|El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh).
+    	    a band of bitches|Sábado|21:55|22:30|unión indio|fusion de rock, hip hop, grupero.|El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh).
     	    Es segun el propio Jonas un disco conceptual que aborda la tematica del 2012, una mezcla sobre aliens, mayas,la conspiracion, el fin del mundo etc.
     	    Su disco debut "The pre end of the world soundtrack" ya esta disponible en itunes, aunque la version fisica estara disponible hasta septiembre con una edicion limitada diseñado a mano.
     	    Se hacen llamar A Band of Bitches y según su biografía son una sociedad secreta que quiere tomar el control del orden mundial, al escuchar el disco uno piensa que fue hecho por aliens, 
     	    se dice también que es el proyecto solista de Jonas de Plastilina Mosh.
-    	    |En su pagina de facebook enlistan influencias como:
-    	     Jesus
-    	     Napoleon Bonaparte
-    	     Atila el huno
-    	     Fidel Castro
-    	     Rasputin etc... 
+    	    |En su pagina de facebook enlistan influencias como: Jesus, Napoleon Bonaparte, Atila el huno, Fidel Castro, Rasputin, etc. 
     	</item>
-		<item>aiken</item>
-		<item>alex anwandter</item>
+		<item>aiken|Domingo|15:45|16:20|carpa intolerante|a|a|a</item>
+		<item>alex anwandter|Sábado|15:30|15:55|carpa danup|a|a|a</item>
 		<item>
-    	    Apolo|Viernes|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
+    	    apolo|Viernes|16:10|16:35|carpa danup|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
     	    Con un sonido fuerte y energico, planean seguir visitando la republica y algunas partes de america latina en este 2013 para promover su trabajo y sonido.
     	    Con canciones fuertes como guajura y lobo estepario esta banda llego desde chihuahua para mostrar lo que pueden hacer.
     	    |"Viviendo en chihuahua la gente prefiere las canciones en ingles que en español", es lo que ellos dicen, fue el motivo por el cual salir de chihuahua a buscar suerte en monterrey, durante dos años permanecieron ahi para despues emigrar al DF a tener una mejor oportunidad.
     	</item> 
-		<item>arianna puello</item> 
+		<item>arianna puello|Sábado|19:00|19:35|carpa intolerante|a|a|a</item> 
 		<item>
-		    Armando Palomas|Viernes|Rock Alternativo Nacional|Armando Jimenez mejor conocido como Armando Palomas, es un cantaautor independiente, caracterizado por describir la vida con un tono fuerte y sarcastico.
+		    armando Palomas|Viernes|17:10|17:35|Rock Alternativo Nacional|Armando Jimenez mejor conocido como Armando Palomas, es un cantaautor independiente, caracterizado por describir la vida con un tono fuerte y sarcastico.
 		    Originario de Aguascalientes cuenta con 20 años de experiencia que han dejado como producto 18 discos, un dvd y un lp.
 		    Sin hacer mucho escandalo por medio de la publicidad cada año recorre la republica y parte de USA. 
-		    | Este personaje hidrocalido se ha forjado de publico sin estar en TV o Radio, simplemente de boca en boca y con unas letras que dejan a uno con ganas de escuchar mas.
+		    |Este personaje hidrocalido se ha forjado de publico sin estar en TV o Radio, simplemente de boca en boca y con unas letras que dejan a uno con ganas de escuchar mas.
 		</item>
-		<item>arreola + carballo</item>
-		<item>balkanbeats</item>
-		<item>banda de turistas</item>
-		<item>bengala</item>
-		<item>blur</item>
-		<item>bomba estéreo</item>
-		<item>bosnian rainbows</item>
+		<item>arreola + carballo|Domingo|15:35|16:00|unión indio|a|a|a</item>
+		<item>balkanbeats|Domingo|23:10|23:40|carpa danup|a|a|a</item>
+		<item>banda de turistas|Viernes|15:20|15:50|indio|a|a|a</item>
+		<item>bengala|Viernes|21:05|21:35|carpa danup|a|a|a</item>
+		<item>blur|Sábado|22:30|23:59|indio|a|a|a</item>
+		<item>bomba estéreo|Domingo|15:50|16:25|indio|a|a|a</item>
+		<item>bosnian rainbows|Viernes|19:35|20:05|unión indio|a|a|a</item>
 		<item>cabo san roque</item>
-		<item>camila moreno</item>
-		<item>candy</item>
-		<item>carla morrison</item>
-		<item>celso piña</item>
-		 <item>
-              Centavrvs|Jueves|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
+		<item>camila moreno|Sábado|18:10|18:45|carpa intolerante|a|a|a</item>
+		<item>candy|Sábado|16:10|16:35|carpa danup|a|a|a</item>
+		<item>carla morrison|Sábado|19:45|20:45|indio|a|a|a</item>
+		<item>celso piña|Domingo|16:45|17:35|indio|a|a|a</item>
+		<item>
+              centavrvs|Jueves|19:00|19:35|unión indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
               Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
               donde el folclore y la cultura popular mexicana se fusionan con diversos ritmos como la cumbia, la chicha, el afrobeat, los sonidos tribales y brasileños.
-              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.|
-              Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
+              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.
+              |Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
               “Considero que es mejor hacer las cosas con lo que tienes, a nunca hacerlas. Te puedes esperar y ahorrar para un estudio bien chingón, pero igual nunca pasará. 
               Es un aprendizaje muy cabrón.” 
         </item>
-		<item>chicha libre</item>
-		<item>chico trujillo</item>
-		<item>comisario pantera</item>
-		<item>corizonas</item>
-		<item>cultura profética</item>
-		<item>dapuntobeat</item>
-		<item>dardo</item>
-		<item>de nalgas</item>
-		<item>división minúscula</item>
-		<item>dld</item>
-		<item>dorian</item>
-		<item>dread mar i</item>
-		<item>el cuarteto de nos</item> 
-		<item>él mató a un policía motorizado</item> 
-		<item>el tri</item>
-		<item>esteman</item>
+		<item>chicha libre|Domingo|17:20|17:50|carpa danup|a|a|a</item>
+		<item>chico trujillo|Domingo|15:00|15:30|indio|a|a|a</item>
+		<item>comisario pantera|Viernes|17:40|18:05|carpa danup|a|a|a</item>
+		<item>corizonas|Domingo|18:05|18:35|carpa danup|a|a|a</item>
+		<item>cultura profética|Sábado|20:55|21:35|unión indio|a|a|a</item>
+		<item>dapuntobeat|Sábado|21:00|21:35|carpa danup|a|a|a</item>
+		<item>dardo|Viernes|17:45|18:15|carpa intolerante|a|a|a</item>
+		<item>delahoja|Sábado|14:00|14:25|unión indio|a|a|a</item>
+		<item>de nalgas|Viernes|15:00|15:25|unión indio|a|a|a</item>
+		<item>división minúscula|Sábado|15:50|16:30|indio|a|a|a</item>
+		<item>dld|Viernes|16:10|16:50|indio|a|a|a</item>
+		<item>dorian|Sábado|20:10|20:40|carpa danup|a|a|a</item>
+		<item>dread mar i|Sábado|20:00|20:35|unión indio|a|a|a</item>
+		<item>el cuarteto de nos|Domingo|22:35|23:25|unión indio|a|a|a</item> 
+		<item>él mató a un policía motorizado|Domingo|21:25|21:55|carpa danup|a|a|a</item> 
+		<item>el tri|Sábado|16:55|17:55|indio|a|a|a</item>
+		<item>esteman|Domingo|21:55|22:30|carpa intolerante|a|a|a</item>
 		<item>
-		    Enjambre|Jueves|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		    enjambre|Jueves|20:50|21:50|unión indio|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
 		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
 		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
 		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
@@ -75,68 +71,68 @@
 		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
 		</item>
 		<item>
-		    Faltosos|
+		    faltosos|Sábado|15:20|15:45|unión indio|a|a|a
 		</item>
-		<item>fenómeno fuzz</item>
-		<item>flip tamez</item>
-		<item>fobia</item>
-		<item>françois peglau</item>
-		<item>franny glass</item>
-		<item>garrobos</item>
-		<item>gepe</item>
-		<item>golden ganga</item> 
-		<item>here comes the kraken</item> 
-		<item>inclanfunk</item>
-		<item>japandroids</item>
-		<item>jenny and the mexicats</item> 
-		<item>jovanotti</item>
-		<item>juan cirerol</item>
-		<item>kchiporros</item>
-		<item>la banderville</item>
-		<item>lazcano malo</item>
-		<item>le baron</item>
-		<item>leider</item>
-		<item>liber terán</item>
-		<item>los aguas aguas</item>
-		<item>los ángeles azules</item>
-		<item>los amigos invisibles</item>
-		<item>los cuchillos</item>
-		<item>los daniels</item>
-		<item>los fabulosos cadillacs</item> 
-		<item>los auténticos decadentes</item>
-		<item>los jaigüey</item>
-		<item>los macuanos</item>
-		<item>los punsetes</item>
-		<item>los viejos</item>
-		<item>love of lesbian</item>
-		<item>mala rodrí­guez</item>
-		<item>max capote</item>
-		<item>mompox</item>
-		<item>monsieur periné</item>
+		<item>fenómeno fuzz|Domingo|22:50|23:30|carpa intolerante|a|a|a</item>
+		<item>flip tamez|Sábado|14:10|14:35|carpa danup|a|a|a</item>
+		<item>fobia|Sábado|18:20|19:20|indio|a|a|a</item>
+		<item>françois peglau|Viernes|15:25|15:55|carpa intolerante|a|a|a</item>
+		<item>franny glass|Sábado|18:30|19:00|carpa danup|a|a|a</item>
+		<item>garrobos|Viernes|20:25|20:55|unión indio|a|a|a</item>
+		<item>gepe|Domingo|20:35|21:05|carpa danup|a|a|a</item>
+		<item>golden ganga|Viernes|16:25|16:50|unión indio|a|a|a</item> 
+		<item>here comes the kraken|Viernes|21:15|21:50|unión indio|a|a|a</item> 
+		<item>inclanfunk|Domingo|18:20|18:55|carpa intolerante|a|a|a</item>
+		<item>japandroids|Viernes|18:25|19:00|carpa danup|a|a|a</item>
+		<item>jenny and the mexicats|Viernes|20:15|20:50|carpa intolerante|a|a|a</item> 
+		<item>jovanotti|Domingo|19:25|20:05|unión indio|a|a|a</item>
+		<item>juan cirerol|Viernes|18:45|19:15|unión indio|a|a|a</item>
+		<item>kchiporros|Sábado|14:05|14:35|indio|a|a|a</item>
+		<item>la banderville|Sábado|20:40|21:15|carpa intolerante|a|a|a</item>
+		<item>lazcano malo|Domingo|16:15|16:40|unión indio|a|a|a</item>
+		<item>le baron|Domingo|22:20|22:50|carpa danup|a|a|a</item>
+		<item>leider|Domingo|14:15|14:40|unión indio|a|a|a</item>
+		<item>liber terán|Domingo|19:45|20:15|carpa danup|a|a|a</item>
+		<item>los aguas aguas|Domingo|14:50|15:25|carpa intolerante|a|a|a</item>
+		<item>los ángeles azules|Sábado|19:05|19:40|unión indio|a|a|a</item>
+		<item>los amigos invisibles|Viernes|17:10|17:50|indio|a|a|a</item>
+		<item>los cuchillos|Domingo|16:00|16:25|carpa danup|a|a|a</item>
+		<item>los daniels|Sábado|14:55|15:30|indio|a|a|a</item>
+		<item>los fabulosos cadillacs|Domingo|20:50|22:20|indio|a|a|a</item> 
+		<item>los auténticos decadentes|Viernes|18:15|19:15|indio|a|a|a</item>
+		<item>los jaigüey|Viernes|15:40|16:05|unión indio|a|a|a</item>
+		<item>los macuanos|Sábado|16:55|17:20|carpa danup|a|a|a</item>
+		<item>los punsetes|Viernes|20:15|20:25|carpa danup|a|a|a</item>
+		<item>los viejos|Domingo|15:20|15:45|carpa danup|a|a|a</item>
+		<item>love of lesbian|Viernes|19:20|19:55|carpa danup|a|a|a</item>
+		<item>mala rodríguez|Sábado|16:40|17:10|unión indio|a|a|a</item>
+		<item>max capote|Domingo|17:30|18:05|carpa intolerante|a|a|a</item>
+		<item>mompox|Sábado|19:50|20:25|carpa intolerante|a|a|a</item>
+		<item>monsieur periné|Domingo|18:55|19:25|carpa danup|a|a|a</item>
 		<item>
-		    Morrissey|Jueves|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
+		    morrissey|Jueves|22:10|23:20|unión indio|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
 		    Es en 1987, cuando se da la separacion de la banda, que inicia su carrera como solista.
 		    Una de las figuras más icónicas y uno de los artistas alternativos con mayor influencia en las últimas décadas.
 		    Muchos lo han calificado de polémico, arrogante, crítico e irónico, pero lo que si es un hecho, es que ha dejado un gran legado en su natal manchester. 
 		    Su primer album como solista "viva hate" en 1988 y su ultimo disco de estudio en febrero del 2009 "Years of refusal".| Después su primer disco, Morrissey se asoció con el ex productor de The Smiths Stephen Street, Vini Reilly de The Durutti Column y el baterista Andrew Paresi.
 		    Morrissey es un ávido defensor de los derechos de los animales desde los 11 años.
 		</item>
-		<item>mostro</item>
-		<item>motor</item>
-		<item>nabuzenko</item>
-		<item>naftalina</item>
-		<item>natalia lafourcade</item>
-		<item>negros vivos</item>
-		<item>nortec collective presents: bostich + fussible</item> 
-		<item>ocean’s acoustic</item>
-		<item>odisseo</item>
-		<item>ondatrópica</item>
-		<item>orka</item>
-		<item>orquesta garash</item> 
-		<item>panteón rococó</item>
-		<item>pato machete</item>
+		<item>mostro|Viernes|19:20|19:55|carpa intolerante|a|a|a</item>
+		<item>motor|Domingo|16:40|17:15|carpa intolerante|a|a|a</item>
+		<item>nabuzenko|Domingo|14:00|14:35|carpa intolerante|a|a|a</item>
+		<item>naftalina|Domingo|17:40|18:10|unión indio|a|a|a</item>
+		<item>natalia lafourcade|Domingo|20:25|21:05|unión indio|a|a|a</item>
+		<item>negros vivos|Sábado|14:40|15:05|unión indio|a|a|a</item>
+		<item>nortec collective presents: bostich + fussible|Domingo|22:50|23:50|indio|a|a|a</item> 
+		<item>ocean’s acoustic|Viernes|14:40|15:10|carpa intolerante|a|a|a</item>
+		<item>odisseo|Sábado|17:20|17:55|carpa intolerante|a|a|a</item>
+		<item>ondatrópica|Domingo|16:55|17:25|unión indio|a|a|a</item>
+		<item>orka|Sábado|15:40|16:15|carpa intolerante|a|a|a</item>
+		<item>orquesta garash|Sábado|14:50|15:15|carpa danup|a|a|a</item> 
+		<item>panteón rococó|Domingo|18:00|19:00|indio|a|a|a</item>
+		<item>pato machete|Domingo|14:10|14:40|indio|a|a|a</item>
 		<item>
-		    Pegasvs|Jueves|Electronica|Duo formado por Sergio y Luciana,
+		    pegasvs|Jueves|19:55|20:30|unión indio|Electronica|Duo formado por Sergio y Luciana,
 		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
 		    Sus referentes son los grupos alemanes de krautrock de los 70\'s y pop "ensoñador".
 		    juntos han facturado un disco repleto de cañonazos de retropop con una sala de máquinas de todo tipo.
@@ -144,53 +140,54 @@
 		    Sergio hizo música hardcore, punk, bluegrass en bandas como Thelemáticos, Anticonceptivas o incluso The Sad Believers, entre muchos otros proyectos.
 		    Luciana participó en los primeros, pero tambien en la banda Sibyl Vane.    
 		</item>
-		<item>pez diablo</item>
-		<item>porter</item>
-		<item>puerto candelaria</item>
-		<item>quinto sol</item>
-		<item>radio kaos</item>
+		<item>pez diablo|Sábado|21:30|22:05|carpa intolerante|a|a|a</item>
+		<item>porter|Viernes|19:40|20:30|indio|a|a|a</item>
+		<item>puerto candelaria|Sábado|17:25|17:55|unión indio|a|a|a</item>
+		<item>quinto sol|Sábado|18:15|18:45|unión indio|a|a|a</item>
+		<item>radio kaos|Viernes|14:50|15:15|carpa danup|a|a|a</item>
 		<item>rarefolk</item>
-		<item>real de catorce</item> 
-		<item>red oblivion</item>
-		<item>renoh</item>
-		<item>románticos de zacatecas</item> 
-		<item>salón victoria</item>
-		<item>seward</item>
-		<item>silversun pickups</item> 
-		<item>ska-p</item>
-		<item>sonido changorama</item> 
-		<item>sonido gallo negro</item>
-		<item>sonido landon</item>
-		<item>soziedad alkoholika</item>
-		<item>split heaven</item>
-		<item>señor loop</item>
-		<item>sussie 4</item>
-		<item>tame impala</item>
-		<item>tex tex</item>
-		<item>the dragulas</item>
-		<item>tío gus</item>
-		<item>twin tones</item>
-		<item>ulises hadjis</item>
-		<item>vía rústica</item>
-		<item>violadores del verso</item> 
-		<item>underworld</item>
-		<item>volcán</item>
-		<item>xoel lópez</item>
-		<item>yeah yeah yeahs</item>
-		<item>yokozuna</item>
-		<item>!deladap</item>
+		<item>real de catorce|Domingo|18:30|19:05|unión indio|a|a|a</item> 
+		<item>red oblivion|Domingo|14:05|14:25|carpa danup|a|a|a</item>
+		<item>renoh|Domingo|14:40|15:05|carpa danup|a|a|a</item>
+		<item>románticos de zacatecas|Viernes|16:55|17:20|carpa danup|a|a|a</item> 
+		<item>salón victoria|Viernes|22:10|23:00|carpa intolerante|a|a|a</item>
+		<item>seward|Viernes|16:10|16:45|carpa intolerante|a|a|a</item>
+		<item>silversun pickups|Domingo|21:25|22:15|unión indio|a|a|a</item> 
+		<item>ska-p|Domingo|19:25|20:25|indio|a|a|a</item>
+		<item>sonido changorama|Domingo|19:15|19:50|carpa intolerante|a|a|a</item> 
+		<item>sonido gallo negro|Sábado|21:55|22:25|carpa danup|a|a|a</item>
+		<item>soziedad alkoholika|Viernes|22:10|22:50|unión indio|a|a|a</item>
+		<item>split heaven|Domingo|14:55|15:20|unión indio|a|a|a</item>
+		<item>señor landon|Sábado|14:00|14:35|carpa intolerante|a|a|a</item>
+		<item>señor loop|Sábado|14:50|15:25|carpa intolerante|a|a|a</item>
+		<item>sussie 4|Sábado|19:20|19:50|carpa danup|a|a|a</item>
+		<item>tame impala|Sábado|21:05|22:05|indio|a|a|a</item>
+		<item>tex tex|Viernes|17:55|18:25|unión indio|a|a|a</item>
+		<item>the dragulas|Viernes|17:00|17:30|carpa intolerante|a|a|a</item>
+		<item>tío gus|Viernes|18:35|19:05|carpa intolerante|a|a|a</item>
+		<item>twin tones|Domingo|16:40|17:05|carpa danup|a|a|a</item>
+		<item>ulises hadjis|Sábado|16:30|17:05|carpa intolerante|a|a|a</item>
+		<item>vía rústica|Viernes|21:10|21:45|carpa intolerante|a|a|a</item>
+		<item>violadores del verso|Sábado|16:00|16:25|unión indio|a|a|a</item> 
+		<item>underworld|Viernes|22:30|23:50|indio|a|a|a</item>
+		<item>volcán|Viernes|15:30|15:55|carpa danup|a|a|a</item>
+		<item>xoel lópez|Domingo|20:05|20:45|carpa intolerante|a|a|a</item>
+		<item>yeah yeah yeahs|Viernes|20:55|22:05|indio|a|a|a</item>
+		<item>yokozuna|Sábado|17:40|18:10|carpa danup|a|a|a</item>
+		<item>!deladap|Viernes|21:55|22:30|carpa danup|a|a|a</item>
     </string-array>
     <string-array name="bandasJueves">
         <item>
-              Centavrvs|Jueves|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
+              centavrvs|Jueves|19:00|19:35|unión indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
               Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
               donde el folclore y la cultura popular mexicana se fusionan con diversos ritmos como la cumbia, la chicha, el afrobeat, los sonidos tribales y brasileños.
-              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.|
-              Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
+              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.
+              |Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
               “Considero que es mejor hacer las cosas con lo que tienes, a nunca hacerlas. Te puedes esperar y ahorrar para un estudio bien chingón, pero igual nunca pasará. 
               Es un aprendizaje muy cabrón.” 
         </item>
-		<item>Enjambre|Jueves|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		<item>
+		    enjambre|Jueves|20:50|21:50|unión indio|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
 		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
 		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
 		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
@@ -198,7 +195,7 @@
 		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
 		</item>
 		<item>
-		    Morrissey|Jueves|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
+		    morrissey|Jueves|22:10|23:20|unión indio|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
 		    Es en 1987, cuando se da la separacion de la banda, que inicia su carrera como solista.
 		    Una de las figuras más icónicas y uno de los artistas alternativos con mayor influencia en las últimas décadas.
 		    Muchos lo han calificado de polémico, arrogante, crítico e irónico, pero lo que si es un hecho, es que ha dejado un gran legado en su natal manchester. 
@@ -206,7 +203,7 @@
 		    Morrissey es un ávido defensor de los derechos de los animales desde los 11 años.
 		</item>
 		<item>
-		    Pegasvs|Jueves|Electronica|Duo formado por Sergio y Luciana,
+		    pegasvs|Jueves|19:55|20:30|unión indio|Electronica|Duo formado por Sergio y Luciana,
 		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
 		    Sus referentes son los grupos alemanes de krautrock de los 70\'s y pop "ensoñador".
 		    juntos han facturado un disco repleto de cañonazos de retropop con una sala de máquinas de todo tipo.
@@ -262,7 +259,7 @@
     </string-array>
     <string-array name="bandasSabado">
         <item>
-    	    A Band Of Bitches |Sabado |Fusion de rock, hip hop, grupero |El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh)
+    	    A Band Of Bitches |Sábado |Fusion de rock, hip hop, grupero |El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh)
     	    Es segun el propio Jonas un disco conceptual que aborda la tematica del 2012, una mezcla sobre aliens, mayas,la conspiracion, el fin del mundo etc.
     	    Su disco debut "The pre end of the world soundtrack" ya esta disponible en itunes, aunque la version fisica estara disponible hasta septiembre con una edicion limitada diseñado a mano.
     	    Se hacen llamar A Band of Bitches y según su biografía son una sociedad secreta que quiere tomar el control del orden mundial, al escuchar el disco uno piensa que fue hecho por aliens, 
@@ -304,7 +301,7 @@
 		<item>quinto sol</item>
 		<item>románticos de zacatecas</item>
 		<item>sonido gallo negro</item>
-		<item>sonido landon</item>
+		<item>señor landon</item>
 		<item>señor loop</item>
 		<item>sussie 4</item>
 		<item>tame impala</item>

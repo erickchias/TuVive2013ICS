@@ -23,21 +23,18 @@ public class Evento extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         mItem = menu.add("Boletos");
-       // mItem.setIcon(android.R.drawable.ic_menu_info_details);
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         Intent info = new Intent(getActivity(), InfoActivity.class );
         mItem.setIntent(info);
         
         mItem =menu.add("Lugar");
-       // mItem.setIcon(android.R.drawable.ic_menu_compass);
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         Intent lugar = new Intent(getActivity(), LugarActivity.class );
         mItem.setIntent(lugar);
         
         mItem =menu.add("Tips");
-        //mItem.setIcon(android.R.drawable.ic_menu_view);
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        Intent tips = new Intent(getActivity(), LugarActivity.class );
+        Intent tips = new Intent(getActivity(), TipsActivity.class );
         mItem.setIntent(tips);
         
         

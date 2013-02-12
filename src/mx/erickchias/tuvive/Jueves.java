@@ -20,14 +20,18 @@ public class Jueves extends ListFragment {
 	  public void onActivityCreated(Bundle savedInstanceState) {
 	    super.onActivityCreated(savedInstanceState);
         
-		 String[] values =getResources().getStringArray(R.array.bandasJueves);
+	    
+	    String[] values =getResources().getStringArray(R.array.bandasJueves);
+		 String[] names=new String[values.length];
+		 for(int i=0;i<values.length;i++){
+			 String txt=values[i].toString();
+			 String[]s_values=txt.split("\\|");
+			 names[i]=s_values[0].toString();
+		 }
 			    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-			        android.R.layout.simple_list_item_1	,values);
+			        android.R.layout.simple_list_item_1	,names);
 			    setListAdapter(adapter);
-			  
-
-			 
-		
+	    
         setHasOptionsMenu(true);
        // return view;
     }
@@ -35,8 +39,7 @@ public class Jueves extends ListFragment {
 	 public void onListItemClick(ListView l, View v, int position, long id) {
 	    // Do something with the data
 		 //Log.i("the Item clicked is at position : ",  String.valueOf(position).toString());
-		 Intent verBanda = new Intent(getActivity(), BandaActivity.class );
-		 verBanda.putExtra("array", String.valueOf(1));
+		 Intent verBanda = new Intent(getActivity(), JuevesBandaActivity.class );
 		 verBanda.putExtra("pos", String.valueOf(position));
 		 startActivity(verBanda);
 
@@ -44,23 +47,7 @@ public class Jueves extends ListFragment {
 	
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        mItem = menu.add("Por día");
-       // mItem.setIcon(android.R.drawable.ic_menu_info_details);
-        mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        Intent info = new Intent(getActivity(), PorDiaActivity.class );
-        mItem.setIntent(info);
-        
-        mItem =menu.add("Mis bandas");
-       // mItem.setIcon(android.R.drawable.ic_menu_compass);
-        mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        /*Intent lugar = new Intent(getActivity(), LugarActivity.class );
-        mItem.setIntent(lugar);*/
-        
-        /*mItem =menu.add("Tips");
-        //mItem.setIcon(android.R.drawable.ic_menu_view);
-        mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        Intent tips = new Intent(getActivity(), LugarActivity.class );
-        mItem.setIntent(tips);*/
+     
         
         
     }
