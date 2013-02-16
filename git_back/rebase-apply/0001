@@ -1,0 +1,854 @@
+From bf38cd7a01984f121361444cced18af36b8d1202 Mon Sep 17 00:00:00 2001
+From: morfyto <echias@outlook.com>
+Date: Sat, 16 Feb 2013 15:05:42 -0600
+Subject: Updates
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Corrección de error de Array por días. Updates menores.
+---
+ AndroidManifest.xml                                |  17 +
+ gen/mx/erickchias/tuvive/R.java                    |   3 +
+ res/layout/activity_banda.xml                      |   4 +-
+ res/values/bandas.xml                              | 466 ++++++++++-----------
+ res/values/strings.xml                             |   3 +
+ src/mx/erickchias/tuvive/BandaActivity.java        |   7 -
+ src/mx/erickchias/tuvive/Domingo.java              |   3 +-
+ src/mx/erickchias/tuvive/DomingoBandaActivity.java |   7 -
+ src/mx/erickchias/tuvive/Jueves.java               |  26 +-
+ src/mx/erickchias/tuvive/PorDiaActivity.java       |  15 +
+ src/mx/erickchias/tuvive/Sabado.java               |   3 +-
+ src/mx/erickchias/tuvive/SabadoBandaActivity.java  |   7 -
+ src/mx/erickchias/tuvive/Viernes.java              |   5 +-
+ src/mx/erickchias/tuvive/ViernesBandaActivity.java |   8 +-
+ 14 files changed, 300 insertions(+), 274 deletions(-)
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 85eef2a37ee58147ddccad2714c94e86387bb492..4d8c912d74effabd96452f33f50c3e345e1a2d63 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -64,14 +64,31 @@
+             android:name="mx.erickchias.tuvive.JuevesBandaActivity"
+             android:label="@string/title_activity_banda" >
+         </activity>
++         <activity
++            android:name="mx.erickchias.tuvive.ViernesBandaActivity"
++            android:label="@string/title_activity_banda" >
++        </activity>
++         <activity
++            android:name="mx.erickchias.tuvive.SabadoBandaActivity"
++            android:label="@string/title_activity_banda" >
++        </activity>
++         <activity
++            android:name="mx.erickchias.tuvive.DomingoBandaActivity"
++            android:label="@string/title_activity_banda" >
++        </activity>
+         <activity
+             android:name="mx.erickchias.tuvive.PorDiaActivity"
+             android:label="@string/title_activity_por_dia" >
+         </activity>
+ 
++        <!-- test 
+         <meta-data
+             android:name="com.google.android.maps.v2.API_KEY"
+             android:value="AIzaSyAhVyloGAbGTbnlV21lIjGAc3HNnVwznUE" />
++             -->
++         <meta-data
++            android:name="com.google.android.maps.v2.API_KEY"
++            android:value="AIzaSyA2vlmFx8JovD0AaabH7eU9CrLXEGWlf38" />
+ 
+         <activity
+             android:name="mx.erickchias.tuvive.TipsActivity"
+diff --git a/gen/mx/erickchias/tuvive/R.java b/gen/mx/erickchias/tuvive/R.java
+index 881b20322144a0790cdf835326ebf12a0c1a6e08..b448d605e0323172bf064ddd324cb950731745ce 100644
+--- a/gen/mx/erickchias/tuvive/R.java
++++ b/gen/mx/erickchias/tuvive/R.java
+@@ -237,6 +237,9 @@ containing a value of this type.
+     }
+     public static final class string {
+         public static final int acerca=0x7f050017;
++        /**  Banda 
++         */
++        public static final int add_banda=0x7f050033;
+         public static final int app_name=0x7f05000c;
+         public static final int bol_abono=0x7f050023;
+         public static final int bol_abono_note=0x7f050024;
+diff --git a/res/layout/activity_banda.xml b/res/layout/activity_banda.xml
+index e1d0b26e50f7b22003f1c41f1690ce37ea369bcc..0b9e033a6b88cef793b89c5ceced019386958889 100644
+--- a/res/layout/activity_banda.xml
++++ b/res/layout/activity_banda.xml
+@@ -45,7 +45,7 @@
+         android:layout_marginTop="10dp"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+-    <TextView
++   <TextView
+         android:id="@+id/mas"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+@@ -59,7 +59,7 @@
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+-        android:text="Button" />
++        android:text="@string/add_banda" />
+     
+ </LinearLayout>
+ </ScrollView>
+\ No newline at end of file
+diff --git a/res/values/bandas.xml b/res/values/bandas.xml
+index 788157de56334478cf00569ab5194d6e0e902199..9465e1724c73871fb25f91001164a71d921948cf 100644
+--- a/res/values/bandas.xml
++++ b/res/values/bandas.xml
+@@ -9,33 +9,33 @@
+     	    se dice también que es el proyecto solista de Jonas de Plastilina Mosh.
+     	    |En su pagina de facebook enlistan influencias como: Jesus, Napoleon Bonaparte, Atila el huno, Fidel Castro, Rasputin, etc. 
+     	</item>
+-		<item>aiken|Domingo|15:45|16:20|carpa intolerante|a|a|a</item>
+-		<item>alex anwandter|Sábado|15:30|15:55|carpa danup|a|a|a</item>
++		<item>aiken|Domingo|15:45|16:20|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>alex anwandter|Sábado|15:30|15:55|carpa danup|No disponible|No disponible|No disponible</item>
+ 		<item>
+     	    apolo|Viernes|16:10|16:35|carpa danup|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
+     	    Con un sonido fuerte y energico, planean seguir visitando la republica y algunas partes de america latina en este 2013 para promover su trabajo y sonido.
+     	    Con canciones fuertes como guajura y lobo estepario esta banda llego desde chihuahua para mostrar lo que pueden hacer.
+     	    |"Viviendo en chihuahua la gente prefiere las canciones en ingles que en español", es lo que ellos dicen, fue el motivo por el cual salir de chihuahua a buscar suerte en monterrey, durante dos años permanecieron ahi para despues emigrar al DF a tener una mejor oportunidad.
+     	</item> 
+-		<item>arianna puello|Sábado|19:00|19:35|carpa intolerante|a|a|a</item> 
++		<item>arianna puello|Sábado|19:00|19:35|carpa intolerante|No disponible|No disponible|No disponible</item> 
+ 		<item>
+ 		    armando Palomas|Viernes|17:10|17:35|Rock Alternativo Nacional|Armando Jimenez mejor conocido como Armando Palomas, es un cantaautor independiente, caracterizado por describir la vida con un tono fuerte y sarcastico.
+ 		    Originario de Aguascalientes cuenta con 20 años de experiencia que han dejado como producto 18 discos, un dvd y un lp.
+ 		    Sin hacer mucho escandalo por medio de la publicidad cada año recorre la republica y parte de USA. 
+ 		    |Este personaje hidrocalido se ha forjado de publico sin estar en TV o Radio, simplemente de boca en boca y con unas letras que dejan a uno con ganas de escuchar mas.
+ 		</item>
+-		<item>arreola + carballo|Domingo|15:35|16:00|unión indio|a|a|a</item>
+-		<item>balkanbeats|Domingo|23:10|23:40|carpa danup|a|a|a</item>
+-		<item>banda de turistas|Viernes|15:20|15:50|indio|a|a|a</item>
+-		<item>bengala|Viernes|21:05|21:35|carpa danup|a|a|a</item>
+-		<item>blur|Sábado|22:30|23:59|indio|a|a|a</item>
+-		<item>bomba estéreo|Domingo|15:50|16:25|indio|a|a|a</item>
+-		<item>bosnian rainbows|Viernes|19:35|20:05|unión indio|a|a|a</item>
++		<item>arreola + carballo|Domingo|15:35|16:00|unión indio|No disponible|No disponible|No disponible</item>
++		<item>balkanbeats|Domingo|23:10|23:40|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>banda de turistas|Viernes|15:20|15:50|indio|No disponible|No disponible|No disponible</item>
++		<item>bengala|Viernes|21:05|21:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>blur|Sábado|22:30|23:59|indio|No disponible|No disponible|No disponible</item>
++		<item>bomba estéreo|Domingo|15:50|16:25|indio|No disponible|No disponible|No disponible</item>
++		<item>bosnian rainbows|Viernes|19:35|20:05|unión indio|No disponible|No disponible|No disponible</item>
+ 		<item>cabo san roque</item>
+-		<item>camila moreno|Sábado|18:10|18:45|carpa intolerante|a|a|a</item>
+-		<item>candy|Sábado|16:10|16:35|carpa danup|a|a|a</item>
+-		<item>carla morrison|Sábado|19:45|20:45|indio|a|a|a</item>
+-		<item>celso piña|Domingo|16:45|17:35|indio|a|a|a</item>
++		<item>camila moreno|Sábado|18:10|18:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>candy|Sábado|16:10|16:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>carla morrison|Sábado|19:45|20:45|indio|No disponible|No disponible|No disponible</item>
++		<item>celso piña|Domingo|16:45|17:35|indio|No disponible|No disponible|No disponible</item>
+ 		<item>
+               centavrvs|Jueves|19:00|19:35|unión indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
+               Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
+@@ -45,23 +45,23 @@
+               “Considero que es mejor hacer las cosas con lo que tienes, a nunca hacerlas. Te puedes esperar y ahorrar para un estudio bien chingón, pero igual nunca pasará. 
+               Es un aprendizaje muy cabrón.” 
+         </item>
+-		<item>chicha libre|Domingo|17:20|17:50|carpa danup|a|a|a</item>
+-		<item>chico trujillo|Domingo|15:00|15:30|indio|a|a|a</item>
+-		<item>comisario pantera|Viernes|17:40|18:05|carpa danup|a|a|a</item>
+-		<item>corizonas|Domingo|18:05|18:35|carpa danup|a|a|a</item>
+-		<item>cultura profética|Sábado|20:55|21:35|unión indio|a|a|a</item>
+-		<item>dapuntobeat|Sábado|21:00|21:35|carpa danup|a|a|a</item>
+-		<item>dardo|Viernes|17:45|18:15|carpa intolerante|a|a|a</item>
+-		<item>delahoja|Sábado|14:00|14:25|unión indio|a|a|a</item>
+-		<item>de nalgas|Viernes|15:00|15:25|unión indio|a|a|a</item>
+-		<item>división minúscula|Sábado|15:50|16:30|indio|a|a|a</item>
+-		<item>dld|Viernes|16:10|16:50|indio|a|a|a</item>
+-		<item>dorian|Sábado|20:10|20:40|carpa danup|a|a|a</item>
+-		<item>dread mar i|Sábado|20:00|20:35|unión indio|a|a|a</item>
+-		<item>el cuarteto de nos|Domingo|22:35|23:25|unión indio|a|a|a</item> 
+-		<item>él mató a un policía motorizado|Domingo|21:25|21:55|carpa danup|a|a|a</item> 
+-		<item>el tri|Sábado|16:55|17:55|indio|a|a|a</item>
+-		<item>esteman|Domingo|21:55|22:30|carpa intolerante|a|a|a</item>
++		<item>chicha libre|Domingo|17:20|17:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>chico trujillo|Domingo|15:00|15:30|indio|No disponible|No disponible|No disponible</item>
++		<item>comisario pantera|Viernes|17:40|18:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>corizonas|Domingo|18:05|18:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>cultura profética|Sábado|20:55|21:35|unión indio|No disponible|No disponible|No disponible</item>
++		<item>dapuntobeat|Sábado|21:00|21:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>dardo|Viernes|17:45|18:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>delahoja|Sábado|14:00|14:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>de nalgas|Viernes|15:00|15:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>división minúscula|Sábado|15:50|16:30|indio|No disponible|No disponible|No disponible</item>
++		<item>dld|Viernes|16:10|16:50|indio|No disponible|No disponible|No disponible</item>
++		<item>dorian|Sábado|20:10|20:40|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>dread mar i|Sábado|20:00|20:35|unión indio|No disponible|No disponible|No disponible</item>
++		<item>el cuarteto de nos|Domingo|22:35|23:25|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>él mató a un policía motorizado|Domingo|21:25|21:55|carpa danup|No disponible|No disponible|No disponible</item> 
++		<item>el tri|Sábado|16:55|17:55|indio|No disponible|No disponible|No disponible</item>
++		<item>esteman|Domingo|21:55|22:30|carpa intolerante|No disponible|No disponible|No disponible</item>
+ 		<item>
+ 		    enjambre|Jueves|20:50|21:50|unión indio|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+ 		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
+@@ -71,44 +71,44 @@
+ 		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
+ 		</item>
+ 		<item>
+-		    faltosos|Sábado|15:20|15:45|unión indio|a|a|a
++		    faltosos|Sábado|15:20|15:45|unión indio|No disponible|No disponible|No disponible
+ 		</item>
+-		<item>fenómeno fuzz|Domingo|22:50|23:30|carpa intolerante|a|a|a</item>
+-		<item>flip tamez|Sábado|14:10|14:35|carpa danup|a|a|a</item>
+-		<item>fobia|Sábado|18:20|19:20|indio|a|a|a</item>
+-		<item>françois peglau|Viernes|15:25|15:55|carpa intolerante|a|a|a</item>
+-		<item>franny glass|Sábado|18:30|19:00|carpa danup|a|a|a</item>
+-		<item>garrobos|Viernes|20:25|20:55|unión indio|a|a|a</item>
+-		<item>gepe|Domingo|20:35|21:05|carpa danup|a|a|a</item>
+-		<item>golden ganga|Viernes|16:25|16:50|unión indio|a|a|a</item> 
+-		<item>here comes the kraken|Viernes|21:15|21:50|unión indio|a|a|a</item> 
+-		<item>inclanfunk|Domingo|18:20|18:55|carpa intolerante|a|a|a</item>
+-		<item>japandroids|Viernes|18:25|19:00|carpa danup|a|a|a</item>
+-		<item>jenny and the mexicats|Viernes|20:15|20:50|carpa intolerante|a|a|a</item> 
+-		<item>jovanotti|Domingo|19:25|20:05|unión indio|a|a|a</item>
+-		<item>juan cirerol|Viernes|18:45|19:15|unión indio|a|a|a</item>
+-		<item>kchiporros|Sábado|14:05|14:35|indio|a|a|a</item>
+-		<item>la banderville|Sábado|20:40|21:15|carpa intolerante|a|a|a</item>
+-		<item>lazcano malo|Domingo|16:15|16:40|unión indio|a|a|a</item>
+-		<item>le baron|Domingo|22:20|22:50|carpa danup|a|a|a</item>
+-		<item>leider|Domingo|14:15|14:40|unión indio|a|a|a</item>
+-		<item>liber terán|Domingo|19:45|20:15|carpa danup|a|a|a</item>
+-		<item>los aguas aguas|Domingo|14:50|15:25|carpa intolerante|a|a|a</item>
+-		<item>los ángeles azules|Sábado|19:05|19:40|unión indio|a|a|a</item>
+-		<item>los amigos invisibles|Viernes|17:10|17:50|indio|a|a|a</item>
+-		<item>los cuchillos|Domingo|16:00|16:25|carpa danup|a|a|a</item>
+-		<item>los daniels|Sábado|14:55|15:30|indio|a|a|a</item>
+-		<item>los fabulosos cadillacs|Domingo|20:50|22:20|indio|a|a|a</item> 
+-		<item>los auténticos decadentes|Viernes|18:15|19:15|indio|a|a|a</item>
+-		<item>los jaigüey|Viernes|15:40|16:05|unión indio|a|a|a</item>
+-		<item>los macuanos|Sábado|16:55|17:20|carpa danup|a|a|a</item>
+-		<item>los punsetes|Viernes|20:15|20:25|carpa danup|a|a|a</item>
+-		<item>los viejos|Domingo|15:20|15:45|carpa danup|a|a|a</item>
+-		<item>love of lesbian|Viernes|19:20|19:55|carpa danup|a|a|a</item>
+-		<item>mala rodríguez|Sábado|16:40|17:10|unión indio|a|a|a</item>
+-		<item>max capote|Domingo|17:30|18:05|carpa intolerante|a|a|a</item>
+-		<item>mompox|Sábado|19:50|20:25|carpa intolerante|a|a|a</item>
+-		<item>monsieur periné|Domingo|18:55|19:25|carpa danup|a|a|a</item>
++		<item>fenómeno fuzz|Domingo|22:50|23:30|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>flip tamez|Sábado|14:10|14:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>fobia|Sábado|18:20|19:20|indio|No disponible|No disponible|No disponible</item>
++		<item>françois peglau|Viernes|15:25|15:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>franny glass|Sábado|18:30|19:00|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>garrobos|Viernes|20:25|20:55|unión indio|No disponible|No disponible|No disponible</item>
++		<item>gepe|Domingo|20:35|21:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>golden ganga|Viernes|16:25|16:50|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>here comes the kraken|Viernes|21:15|21:50|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>inclanfunk|Domingo|18:20|18:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>japandroids|Viernes|18:25|19:00|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>jenny and the mexicats|Viernes|20:15|20:50|carpa intolerante|No disponible|No disponible|No disponible</item> 
++		<item>javanotti|Domingo|19:25|20:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>juan cirerol|Viernes|18:45|19:15|unión indio|No disponible|No disponible|No disponible</item>
++		<item>kchiporros|Sábado|14:05|14:35|indio|No disponible|No disponible|No disponible</item>
++		<item>la banderville|Sábado|20:40|21:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>lazcano malo|Domingo|16:15|16:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>le baron|Domingo|22:20|22:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>leider|Domingo|14:15|14:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>liber terán|Domingo|19:45|20:15|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los aguas aguas|Domingo|14:50|15:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>los ángeles azules|Sábado|19:05|19:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>los amigos invisibles|Viernes|17:10|17:50|indio|No disponible|No disponible|No disponible</item>
++		<item>los cuchillos|Domingo|16:00|16:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los daniels|Sábado|14:55|15:30|indio|No disponible|No disponible|No disponible</item>
++		<item>los fabulosos cadillacs|Domingo|20:50|22:20|indio|No disponible|No disponible|No disponible</item> 
++		<item>los auténticos decadentes|Viernes|18:15|19:15|indio|No disponible|No disponible|No disponible</item>
++		<item>los jaigüey|Viernes|15:40|16:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>los macuanos|Sábado|16:55|17:20|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los punsetes|Viernes|20:15|20:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los viejos|Domingo|15:20|15:45|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>love of lesbian|Viernes|19:20|19:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>mala rodríguez|Sábado|16:40|17:10|unión indio|No disponible|No disponible|No disponible</item>
++		<item>max capote|Domingo|17:30|18:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>mompox|Sábado|19:50|20:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>monsieur periné|Domingo|18:55|19:25|carpa danup|No disponible|No disponible|No disponible</item>
+ 		<item>
+ 		    morrissey|Jueves|22:10|23:20|unión indio|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
+ 		    Es en 1987, cuando se da la separacion de la banda, que inicia su carrera como solista.
+@@ -117,20 +117,20 @@
+ 		    Su primer album como solista "viva hate" en 1988 y su ultimo disco de estudio en febrero del 2009 "Years of refusal".| Después su primer disco, Morrissey se asoció con el ex productor de The Smiths Stephen Street, Vini Reilly de The Durutti Column y el baterista Andrew Paresi.
+ 		    Morrissey es un ávido defensor de los derechos de los animales desde los 11 años.
+ 		</item>
+-		<item>mostro|Viernes|19:20|19:55|carpa intolerante|a|a|a</item>
+-		<item>motor|Domingo|16:40|17:15|carpa intolerante|a|a|a</item>
+-		<item>nabuzenko|Domingo|14:00|14:35|carpa intolerante|a|a|a</item>
+-		<item>naftalina|Domingo|17:40|18:10|unión indio|a|a|a</item>
+-		<item>natalia lafourcade|Domingo|20:25|21:05|unión indio|a|a|a</item>
+-		<item>negros vivos|Sábado|14:40|15:05|unión indio|a|a|a</item>
+-		<item>nortec collective presents: bostich + fussible|Domingo|22:50|23:50|indio|a|a|a</item> 
+-		<item>ocean’s acoustic|Viernes|14:40|15:10|carpa intolerante|a|a|a</item>
+-		<item>odisseo|Sábado|17:20|17:55|carpa intolerante|a|a|a</item>
+-		<item>ondatrópica|Domingo|16:55|17:25|unión indio|a|a|a</item>
+-		<item>orka|Sábado|15:40|16:15|carpa intolerante|a|a|a</item>
+-		<item>orquesta garash|Sábado|14:50|15:15|carpa danup|a|a|a</item> 
+-		<item>panteón rococó|Domingo|18:00|19:00|indio|a|a|a</item>
+-		<item>pato machete|Domingo|14:10|14:40|indio|a|a|a</item>
++		<item>mostro|Viernes|19:20|19:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>motor|Domingo|16:40|17:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>nabuzenko|Domingo|14:00|14:35|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>naftalina|Domingo|17:40|18:10|unión indio|No disponible|No disponible|No disponible</item>
++		<item>natalia lafourcade|Domingo|20:25|21:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>negros vivos|Sábado|14:40|15:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>nortec collective presents: bostich + fussible|Domingo|22:50|23:50|indio|No disponible|No disponible|No disponible</item> 
++		<item>ocean’s acoustic|Viernes|14:40|15:10|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>odisseo|Sábado|17:20|17:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>ondatrópica|Domingo|16:55|17:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>orka|Sábado|15:40|16:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>orquesta garash|Sábado|14:50|15:15|carpa danup|No disponible|No disponible|No disponible</item> 
++		<item>panteón rococó|Domingo|18:00|19:00|indio|No disponible|No disponible|No disponible</item>
++		<item>pato machete|Domingo|14:10|14:40|indio|No disponible|No disponible|No disponible</item>
+ 		<item>
+ 		    pegasvs|Jueves|19:55|20:30|unión indio|Electronica|Duo formado por Sergio y Luciana,
+ 		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
+@@ -140,41 +140,41 @@
+ 		    Sergio hizo música hardcore, punk, bluegrass en bandas como Thelemáticos, Anticonceptivas o incluso The Sad Believers, entre muchos otros proyectos.
+ 		    Luciana participó en los primeros, pero tambien en la banda Sibyl Vane.    
+ 		</item>
+-		<item>pez diablo|Sábado|21:30|22:05|carpa intolerante|a|a|a</item>
+-		<item>porter|Viernes|19:40|20:30|indio|a|a|a</item>
+-		<item>puerto candelaria|Sábado|17:25|17:55|unión indio|a|a|a</item>
+-		<item>quinto sol|Sábado|18:15|18:45|unión indio|a|a|a</item>
+-		<item>radio kaos|Viernes|14:50|15:15|carpa danup|a|a|a</item>
++		<item>pez diablo|Sábado|21:30|22:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>porter|Viernes|19:40|20:30|indio|No disponible|No disponible|No disponible</item>
++		<item>puerto candelaria|Sábado|17:25|17:55|unión indio|No disponible|No disponible|No disponible</item>
++		<item>quinto sol|Sábado|18:15|18:45|unión indio|No disponible|No disponible|No disponible</item>
++		<item>radio kaos|Viernes|14:50|15:15|carpa danup|No disponible|No disponible|No disponible</item>
+ 		<item>rarefolk</item>
+-		<item>real de catorce|Domingo|18:30|19:05|unión indio|a|a|a</item> 
+-		<item>red oblivion|Domingo|14:05|14:25|carpa danup|a|a|a</item>
+-		<item>renoh|Domingo|14:40|15:05|carpa danup|a|a|a</item>
+-		<item>románticos de zacatecas|Viernes|16:55|17:20|carpa danup|a|a|a</item> 
+-		<item>salón victoria|Viernes|22:10|23:00|carpa intolerante|a|a|a</item>
+-		<item>seward|Viernes|16:10|16:45|carpa intolerante|a|a|a</item>
+-		<item>silversun pickups|Domingo|21:25|22:15|unión indio|a|a|a</item> 
+-		<item>ska-p|Domingo|19:25|20:25|indio|a|a|a</item>
+-		<item>sonido changorama|Domingo|19:15|19:50|carpa intolerante|a|a|a</item> 
+-		<item>sonido gallo negro|Sábado|21:55|22:25|carpa danup|a|a|a</item>
+-		<item>soziedad alkoholika|Viernes|22:10|22:50|unión indio|a|a|a</item>
+-		<item>split heaven|Domingo|14:55|15:20|unión indio|a|a|a</item>
+-		<item>señor landon|Sábado|14:00|14:35|carpa intolerante|a|a|a</item>
+-		<item>señor loop|Sábado|14:50|15:25|carpa intolerante|a|a|a</item>
+-		<item>sussie 4|Sábado|19:20|19:50|carpa danup|a|a|a</item>
+-		<item>tame impala|Sábado|21:05|22:05|indio|a|a|a</item>
+-		<item>tex tex|Viernes|17:55|18:25|unión indio|a|a|a</item>
+-		<item>the dragulas|Viernes|17:00|17:30|carpa intolerante|a|a|a</item>
+-		<item>tío gus|Viernes|18:35|19:05|carpa intolerante|a|a|a</item>
+-		<item>twin tones|Domingo|16:40|17:05|carpa danup|a|a|a</item>
+-		<item>ulises hadjis|Sábado|16:30|17:05|carpa intolerante|a|a|a</item>
+-		<item>vía rústica|Viernes|21:10|21:45|carpa intolerante|a|a|a</item>
+-		<item>violadores del verso|Sábado|16:00|16:25|unión indio|a|a|a</item> 
+-		<item>underworld|Viernes|22:30|23:50|indio|a|a|a</item>
+-		<item>volcán|Viernes|15:30|15:55|carpa danup|a|a|a</item>
+-		<item>xoel lópez|Domingo|20:05|20:45|carpa intolerante|a|a|a</item>
+-		<item>yeah yeah yeahs|Viernes|20:55|22:05|indio|a|a|a</item>
+-		<item>yokozuna|Sábado|17:40|18:10|carpa danup|a|a|a</item>
+-		<item>!deladap|Viernes|21:55|22:30|carpa danup|a|a|a</item>
++		<item>real de catorce|Domingo|18:30|19:05|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>red oblivion|Domingo|14:05|14:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>renoh|Domingo|14:40|15:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>románticos de zacatecas|Viernes|16:55|17:20|carpa danup|No disponible|No disponible|No disponible</item> 
++		<item>salón victoria|Viernes|22:10|23:00|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>seward|Viernes|16:10|16:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>silversun pickups|Domingo|21:25|22:15|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>ska-p|Domingo|19:25|20:25|indio|No disponible|No disponible|No disponible</item>
++		<item>sonido changorama|Domingo|19:15|19:50|carpa intolerante|No disponible|No disponible|No disponible</item> 
++		<item>sonido gallo negro|Sábado|21:55|22:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>soziedad alkoholika|Viernes|22:10|22:50|unión indio|No disponible|No disponible|No disponible</item>
++		<item>split heaven|Domingo|14:55|15:20|unión indio|No disponible|No disponible|No disponible</item>
++		<item>señor landon|Sábado|14:00|14:35|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>señor loop|Sábado|14:50|15:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>sussie 4|Sábado|19:20|19:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>tame impala|Sábado|21:05|22:05|indio|No disponible|No disponible|No disponible</item>
++		<item>tex tex|Viernes|17:55|18:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>the dragulas|Viernes|17:00|17:30|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>tío gus|Viernes|18:35|19:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>twin tones|Domingo|16:40|17:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>ulises hadjis|Sábado|16:30|17:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>vía rústica|Viernes|21:10|21:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>violadores del verso|Sábado|16:00|16:25|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>underworld|Viernes|22:30|23:50|indio|No disponible|No disponible|No disponible</item>
++		<item>volcán|Viernes|15:30|15:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>xoel lópez|Domingo|20:05|20:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>yeah yeah yeahs|Viernes|20:55|22:05|indio|No disponible|No disponible|No disponible</item>
++		<item>yokozuna|Sábado|17:40|18:10|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>!deladap|Viernes|21:55|22:30|carpa danup|No disponible|No disponible|No disponible</item>
+     </string-array>
+     <string-array name="bandasJueves">
+         <item>
+@@ -213,141 +213,139 @@
+ 		</item>
+     </string-array>
+     <string-array name="bandasViernes">
+-    	<item>
+-    	    Apolo|Viernes|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
++   	   <item>
++    	    apolo|Viernes|16:10|16:35|carpa danup|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
+     	    Con un sonido fuerte y energico, planean seguir visitando la republica y algunas partes de america latina en este 2013 para promover su trabajo y sonido.
+     	    Con canciones fuertes como guajura y lobo estepario esta banda llego desde chihuahua para mostrar lo que pueden hacer.
+     	    |"Viviendo en chihuahua la gente prefiere las canciones en ingles que en español", es lo que ellos dicen, fue el motivo por el cual salir de chihuahua a buscar suerte en monterrey, durante dos años permanecieron ahi para despues emigrar al DF a tener una mejor oportunidad.
+     	</item>
+ 		<item>
+-		    Armando Palomas|Viernes|Rock Alternativo Nacional|Armando Jimenez mejor conocido como Armando Palomas, es un cantaautor independiente, caracterizado por describir la vida con un tono fuerte y sarcastico.
++		    armando Palomas|Viernes|17:10|17:35|Rock Alternativo Nacional|Armando Jimenez mejor conocido como Armando Palomas, es un cantaautor independiente, caracterizado por describir la vida con un tono fuerte y sarcastico.
+ 		    Originario de Aguascalientes cuenta con 20 años de experiencia que han dejado como producto 18 discos, un dvd y un lp.
+ 		    Sin hacer mucho escandalo por medio de la publicidad cada año recorre la republica y parte de USA. 
+-		    | Este personaje hidrocalido se ha forjado de publico sin estar en TV o Radio, simplemente de boca en boca y con unas letras que dejan a uno con ganas de escuchar mas.
++		    |Este personaje hidrocalido se ha forjado de publico sin estar en TV o Radio, simplemente de boca en boca y con unas letras que dejan a uno con ganas de escuchar mas.
+ 		</item>
+-		<item>bengala</item>
+-		<item>bosnian rainsbows</item>
+-		<item>comisario pantera</item>
+-		<item>dardo</item>
+-		<item>françois peglau</item>
+-		<item>garrobos</item>
+-		<item>golden ganga</item>
+-		<item>here comes the kraken</item>
+-		<item>japandroid</item>
+-		<item>jenny and the mexicats</item> 
+-		<item>juan cirerol</item>
+-		<item>los amigos invisibles</item>
+-		<item>los auténticos decadentes</item>
+-		<item>los jaigüey</item>
+-		<item>los punsetes</item>
+-		<item>love of lesbian</item>
+-		<item>mostro</item>
+-		<item>ocean’s acoustic</item>
+-		<item>porter</item>
+-		<item>radio kaos</item>
+-		<item>salón victoria</item>
+-		<item>seward</item>
+-		<item>soziedad alkoholika</item>
+-		<item>text text</item>
+-		<item>the dragulas</item>
+-		<item>tío gus</item>
+-		<item>underworld</item>
+-		<item>vía rústica</item>
+-		<item>volcán</item>
+-		<item>yeah yeah yeahs</item>
+-		<item>!deladap</item>
++		<item>bengala|Viernes|21:05|21:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>bosnian rainbows|Viernes|19:35|20:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>comisario pantera|Viernes|17:40|18:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>dardo|Viernes|17:45|18:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>françois peglau|Viernes|15:25|15:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>garrobos|Viernes|20:25|20:55|unión indio|No disponible|No disponible|No disponible</item>
++		<item>golden ganga|Viernes|16:25|16:50|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>here comes the kraken|Viernes|21:15|21:50|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>japandroids|Viernes|18:25|19:00|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>jenny and the mexicats|Viernes|20:15|20:50|carpa intolerante|No disponible|No disponible|No disponible</item> 
++		<item>juan cirerol|Viernes|18:45|19:15|unión indio|No disponible|No disponible|No disponible</item>
++		<item>los amigos invisibles|Viernes|17:10|17:50|indio|No disponible|No disponible|No disponible</item>
++		<item>los auténticos decadentes|Viernes|18:15|19:15|indio|No disponible|No disponible|No disponible</item>
++		<item>los jaigüey|Viernes|15:40|16:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>los punsetes|Viernes|20:15|20:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>love of lesbian|Viernes|19:20|19:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>mostro|Viernes|19:20|19:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>ocean’s acoustic|Viernes|14:40|15:10|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>porter|Viernes|19:40|20:30|indio|No disponible|No disponible|No disponible</item>
++		<item>radio kaos|Viernes|14:50|15:15|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>salón victoria|Viernes|22:10|23:00|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>seward|Viernes|16:10|16:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>soziedad alkoholika|Viernes|22:10|22:50|unión indio|No disponible|No disponible|No disponible</item>
++		<item>tex tex|Viernes|17:55|18:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>the dragulas|Viernes|17:00|17:30|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>tío gus|Viernes|18:35|19:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>underworld|Viernes|22:30|23:50|indio|No disponible|No disponible|No disponible</item>
++		<item>vía rústica|Viernes|21:10|21:45|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>volcán|Viernes|15:30|15:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>yeah yeah yeahs|Viernes|20:55|22:05|indio|No disponible|No disponible|No disponible</item>
++		<item>!deladap|Viernes|21:55|22:30|carpa danup|No disponible|No disponible|No disponible</item>
+     </string-array>
+     <string-array name="bandasSabado">
+         <item>
+-    	    A Band Of Bitches |Sábado |Fusion de rock, hip hop, grupero |El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh)
++    	    a band of bitches|Sábado|21:55|22:30|unión indio|fusion de rock, hip hop, grupero.|El nuevo proyecto de Jonas Gonzalez (integrante de plastilina mosh).
+     	    Es segun el propio Jonas un disco conceptual que aborda la tematica del 2012, una mezcla sobre aliens, mayas,la conspiracion, el fin del mundo etc.
+     	    Su disco debut "The pre end of the world soundtrack" ya esta disponible en itunes, aunque la version fisica estara disponible hasta septiembre con una edicion limitada diseñado a mano.
+     	    Se hacen llamar A Band of Bitches y según su biografía son una sociedad secreta que quiere tomar el control del orden mundial, al escuchar el disco uno piensa que fue hecho por aliens, 
+     	    se dice también que es el proyecto solista de Jonas de Plastilina Mosh.
+-    	    |En su pagina de facebook enlistan influencias como:
+-    	     Jesus
+-    	     Napoleon Bonaparte
+-    	     Atila el huno
+-    	     Fidel Castro
+-    	     Rasputin 
+-    	     etc.
++    	    |En su pagina de facebook enlistan influencias como: Jesus, Napoleon Bonaparte, Atila el huno, Fidel Castro, Rasputin, etc. 
+     	</item>
+-		<item>alex anwandter</item>
+-		<item>arianna puello</item>
+-		<item>banda de turistas</item>
+-		<item>blur</item>
+-		<item>carla morrison</item>
+-		<item>corizonas</item>
+-		<item>dapuntobeat</item>
+-		<item>división minúscula</item>
+-		<item>dread mar i</item>
+-		<item>el tri</item>
+-		<item>flip tamez</item>
+-		<item>fobia</item>
+-		<item>franny glass</item>
+-		<item>kchiporros</item>
+-		<item>la banderville</item>
+-		<item>los daniels</item>
+-		<item>los macuanos</item>
+-		<item>mala rodríguez</item>
+-		<item>mompox</item>
+-		<item>negros vivos</item>
+-		<item>odisseo</item>
+-		<item>orka</item>
+-		<item>orquesta garash</item>
+-		<item>panteón rococó</item>
+-		<item>pez diablo</item>
+-		<item>puerto candelaria</item>
+-		<item>quinto sol</item>
+-		<item>románticos de zacatecas</item>
+-		<item>sonido gallo negro</item>
+-		<item>señor landon</item>
+-		<item>señor loop</item>
+-		<item>sussie 4</item>
+-		<item>tame impala</item>
+-		<item>ulises hadjis</item>
+-		<item>violadores del verso</item>
+-		<item>yokozuna</item>
++		<item>alex anwandter|Sábado|15:30|15:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>arianna puello|Sábado|19:00|19:35|carpa intolerante|No disponible|No disponible|No disponible</item> 
++		<item>banda de turistas|Viernes|15:20|15:50|indio|No disponible|No disponible|No disponible</item>
++		<item>blur|Sábado|22:30|23:59|indio|No disponible|No disponible|No disponible</item>
++		<item>carla morrison|Sábado|19:45|20:45|indio|No disponible|No disponible|No disponible</item>
++		<item>corizonas|Domingo|18:05|18:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>dapuntobeat|Sábado|21:00|21:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>división minúscula|Sábado|15:50|16:30|indio|No disponible|No disponible|No disponible</item>
++		<item>dorian|Sábado|20:10|20:40|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>dread mar i|Sábado|20:00|20:35|unión indio|No disponible|No disponible|No disponible</item>
++		<item>el tri|Sábado|16:55|17:55|indio|No disponible|No disponible|No disponible</item>
++		<item>faltosos|Sábado|15:20|15:45|unión indio|No disponible|No disponible|No disponible</item>
++		<item>flip tamez|Sábado|14:10|14:35|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>fobia|Sábado|18:20|19:20|indio|No disponible|No disponible|No disponible</item>
++		<item>franny glass|Sábado|18:30|19:00|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>kchiporros|Sábado|14:05|14:35|indio|No disponible|No disponible|No disponible</item>
++		<item>la banderville|Sábado|20:40|21:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>los ángeles azules|Sábado|19:05|19:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>los daniels|Sábado|14:55|15:30|indio|No disponible|No disponible|No disponible</item>
++		<item>los macuanos|Sábado|16:55|17:20|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>mala rodríguez|Sábado|16:40|17:10|unión indio|No disponible|No disponible|No disponible</item>
++		<item>mompox|Sábado|19:50|20:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>negros vivos|Sábado|14:40|15:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>odisseo|Sábado|17:20|17:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>orka|Sábado|15:40|16:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>orquesta garash|Sábado|14:50|15:15|carpa danup|No disponible|No disponible|No disponible</item> 
++		<item>pez diablo|Sábado|21:30|22:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>puerto candelaria|Sábado|17:25|17:55|unión indio|No disponible|No disponible|No disponible</item>
++		<item>quinto sol|Sábado|18:15|18:45|unión indio|No disponible|No disponible|No disponible</item>
++		<item>románticos de zacatecas|Viernes|16:55|17:20|carpa danup|No disponible|No disponible|No disponible</item> 
++		<item>sonido gallo negro|Sábado|21:55|22:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>señor landon|Sábado|14:00|14:35|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>señor loop|Sábado|14:50|15:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>sussie 4|Sábado|19:20|19:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>tame impala|Sábado|21:05|22:05|indio|No disponible|No disponible|No disponible</item>
++		<item>ulises hadjis|Sábado|16:30|17:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>violadores del verso|Sábado|16:00|16:25|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>yokozuna|Sábado|17:40|18:10|carpa danup|No disponible|No disponible|No disponible</item>
+     </string-array>
+     <string-array name="bandasDomingo">
+-        <item>aiken</item>
+-        <item>arreola + carballo</item>
+-		<item>balkanbeats</item>
+-		<item>bomba estéreo</item>
+-		<item>celso piña</item>
+-		<item>chicha libre</item>
+-		<item>chico trujillo</item>
+-		<item>dorian</item>
+-		<item>el cuarteto de nos</item>
+-		<item>él mató a un policía motorizado</item>
+-		<item>esteman</item>
+-		<item>faltosos</item>
+-		<item>fenómeno fuzz</item>
+-		<item>inclanfunk</item>
+-		<item>gepe</item>
+-		<item>javanotti</item>
+-		<item>lazcano malo</item>
+-		<item>le baron</item>
+-		<item>leider</item>
+-		<item>liber terán</item>
+-		<item>los aguas aguas</item>
+-		<item>los cuchillos</item>
+-		<item>los fabulosos cadillacs</item>
+-		<item>los viejos</item>
+-		<item>max capote</item>
+-		<item>monsieur periné</item>
+-		<item>motor</item>
+-		<item>nabuzenko</item>
+-		<item>naftalina</item>
+-		<item>nortec collective presents: bostich + fussible</item>
+-		<item>ondatrópica</item>
+-		<item>real de catorce</item>
+-		<item>renoh</item>
+-		<item>silversun pickups</item>
+-		<item>ska-p</item>
+-		<item>sonido changorama</item>
+-		<item>spli heaven</item>
+-		<item>twin tones</item>
+-		<item>xoel lópez</item>
++        <item>aiken|Domingo|15:45|16:20|carpa intolerante|No disponible|No disponible|No disponible</item>
++        <item>arreola + carballo|Domingo|15:35|16:00|unión indio|No disponible|No disponible|No disponible</item>
++		<item>balkanbeats|Domingo|23:10|23:40|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>bomba estéreo|Domingo|15:50|16:25|indio|No disponible|No disponible|No disponible</item>
++		<item>celso piña|Domingo|16:45|17:35|indio|No disponible|No disponible|No disponible</item>
++		<item>chicha libre|Domingo|17:20|17:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>chico trujillo|Domingo|15:00|15:30|indio|No disponible|No disponible|No disponible</item>
++		<item>el cuarteto de nos|Domingo|22:35|23:25|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>él mató a un policía motorizado|Domingo|21:25|21:55|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>esteman|Domingo|21:55|22:30|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>fenómeno fuzz|Domingo|22:50|23:30|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>gepe|Domingo|20:35|21:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>inclanfunk|Domingo|18:20|18:55|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>javanotti|Domingo|19:25|20:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>lazcano malo|Domingo|16:15|16:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>le baron|Domingo|22:20|22:50|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>leider|Domingo|14:15|14:40|unión indio|No disponible|No disponible|No disponible</item>
++		<item>liber terán|Domingo|19:45|20:15|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los aguas aguas|Domingo|14:50|15:25|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>los cuchillos|Domingo|16:00|16:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>los fabulosos cadillacs|Domingo|20:50|22:20|indio|No disponible|No disponible|No disponible</item> 
++		<item>los viejos|Domingo|15:20|15:45|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>max capote|Domingo|17:30|18:05|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>monsieur periné|Domingo|18:55|19:25|carpa danup|No disponible|No disponible|No disponible</item>
++	    <item>motor|Domingo|16:40|17:15|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>nabuzenko|Domingo|14:00|14:35|carpa intolerante|No disponible|No disponible|No disponible</item>
++		<item>naftalina|Domingo|17:40|18:10|unión indio|No disponible|No disponible|No disponible</item>
++		<item>natalia lafourcade|Domingo|20:25|21:05|unión indio|No disponible|No disponible|No disponible</item>
++		<item>nortec collective presents: bostich + fussible|Domingo|22:50|23:50|indio|No disponible|No disponible|No disponible</item> 
++		<item>ondatrópica|Domingo|16:55|17:25|unión indio|No disponible|No disponible|No disponible</item>
++		<item>panteón rococó|Domingo|18:00|19:00|indio|No disponible|No disponible|No disponible</item>
++		<item>pato machete|Domingo|14:10|14:40|indio|No disponible|No disponible|No disponible</item>
++		<item>real de catorce|Domingo|18:30|19:05|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>red oblivion|Domingo|14:05|14:25|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>renoh|Domingo|14:40|15:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>silversun pickups|Domingo|21:25|22:15|unión indio|No disponible|No disponible|No disponible</item> 
++		<item>ska-p|Domingo|19:25|20:25|indio|No disponible|No disponible|No disponible</item>
++		<item>sonido changorama|Domingo|19:15|19:50|carpa intolerante|No disponible|No disponible|No disponible</item> 
++		<item>split heaven|Domingo|14:55|15:20|unión indio|No disponible|No disponible|No disponible</item>
++		<item>twin tones|Domingo|16:40|17:05|carpa danup|No disponible|No disponible|No disponible</item>
++		<item>xoel lópez|Domingo|20:05|20:45|carpa intolerante|No disponible|No disponible|No disponible</item>
+     </string-array>
+ </resources>
+\ No newline at end of file
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 29d140f3b09c8b9ecbf08dc23e3b4a49d1265cac..3645ec4ff0f5c840d8b42a7e29f8599b792c75ce 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -56,5 +56,8 @@
+     <string name="title_section1">Section 1</string>
+     <string name="title_activity_por_dia">Bandas por día</string>
+     <string name="title_activity_tips">Tips</string>
++    
++    <!-- Banda -->
++    <string name="add_banda">Agregar recordatorio</string>
+ 
+ </resources>
+\ No newline at end of file
+diff --git a/src/mx/erickchias/tuvive/BandaActivity.java b/src/mx/erickchias/tuvive/BandaActivity.java
+index 987c3b6fe28919263d7b37e9d68738c4e196488c..717e57e35f1536cdf88a5c79a143781c19a3ec13 100644
+--- a/src/mx/erickchias/tuvive/BandaActivity.java
++++ b/src/mx/erickchias/tuvive/BandaActivity.java
+@@ -102,11 +102,4 @@ public class BandaActivity extends Activity {
+ 		 
+ 	}
+ 
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		// Inflate the menu; this adds items to the action bar if it is present.
+-		getMenuInflater().inflate(R.menu.activity_banda, menu);
+-		return true;
+-	}
+-
+ }
+diff --git a/src/mx/erickchias/tuvive/Domingo.java b/src/mx/erickchias/tuvive/Domingo.java
+index 3699c688e8d9cb50acb969ade216b98f0cf050c5..416edd39469891bc19dec5aaa8c914f9944028f0 100644
+--- a/src/mx/erickchias/tuvive/Domingo.java
++++ b/src/mx/erickchias/tuvive/Domingo.java
+@@ -38,8 +38,7 @@ public class Domingo extends ListFragment {
+ 	 public void onListItemClick(ListView l, View v, int position, long id) {
+ 	    // Do something with the data
+ 		 //Log.i("the Item clicked is at position : ",  String.valueOf(position).toString());
+-		 Intent verBanda = new Intent(getActivity(), BandaActivity.class );
+-		 verBanda.putExtra("array",String.valueOf(4));
++		 Intent verBanda = new Intent(getActivity(), DomingoBandaActivity.class );
+ 		 verBanda.putExtra("pos", String.valueOf(position));
+ 		 startActivity(verBanda);
+ 
+diff --git a/src/mx/erickchias/tuvive/DomingoBandaActivity.java b/src/mx/erickchias/tuvive/DomingoBandaActivity.java
+index d633edb4200bf2b92ddb5d0750688e0021d0f36c..5d5ba8eea573e9f7554b2ef201776b1de8a878aa 100644
+--- a/src/mx/erickchias/tuvive/DomingoBandaActivity.java
++++ b/src/mx/erickchias/tuvive/DomingoBandaActivity.java
+@@ -88,11 +88,4 @@ public class DomingoBandaActivity extends Activity {
+ 		 
+ 	}
+ 
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		// Inflate the menu; this adds items to the action bar if it is present.
+-		getMenuInflater().inflate(R.menu.activity_banda, menu);
+-		return true;
+-	}
+-
+ }
+diff --git a/src/mx/erickchias/tuvive/Jueves.java b/src/mx/erickchias/tuvive/Jueves.java
+index e59f826b2fd461815718d0767b06a4ae2acc4f0a..38f5d5b1cc6878cf575bdb8cc025770a5cc08bd3 100644
+--- a/src/mx/erickchias/tuvive/Jueves.java
++++ b/src/mx/erickchias/tuvive/Jueves.java
+@@ -46,10 +46,26 @@ public class Jueves extends ListFragment {
+ 	  }
+ 	
+     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+-        super.onCreateOptionsMenu(menu, inflater);
+-     
+-        
+-        
+-    }
++    	  super.onCreateOptionsMenu(menu, inflater);
++          mItem = menu.add("Todas");
++         // mItem.setIcon(android.R.drawable.ic_menu_info_details);
++          mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
++          Intent info = new Intent(getActivity(), Bandas.class );
++          mItem.setIntent(info);
++          
++          mItem =menu.add("Mis bandas");
++         // mItem.setIcon(android.R.drawable.ic_menu_compass);
++          mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
++          /*Intent lugar = new Intent(getActivity(), LugarActivity.class );
++          mItem.setIntent(lugar);*/
++          
++          /*mItem =menu.add("Tips");
++          //mItem.setIcon(android.R.drawable.ic_menu_view);
++          mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
++          Intent tips = new Intent(getActivity(), LugarActivity.class );
++          mItem.setIntent(tips);*/
++          
++          
++      }
+ 	
+ }
+diff --git a/src/mx/erickchias/tuvive/PorDiaActivity.java b/src/mx/erickchias/tuvive/PorDiaActivity.java
+index d722da8be7933a7e6d286431005a0d92f5d987a5..c55cb30ed37fd9f7ec5069a15eb615e362498d62 100644
+--- a/src/mx/erickchias/tuvive/PorDiaActivity.java
++++ b/src/mx/erickchias/tuvive/PorDiaActivity.java
+@@ -2,6 +2,7 @@ package mx.erickchias.tuvive;
+ 
+ import android.app.ActionBar;
+ import android.app.FragmentTransaction;
++import android.content.Intent;
+ import android.os.Bundle;
+ import android.support.v4.app.Fragment;
+ import android.support.v4.app.FragmentActivity;
+@@ -82,6 +83,20 @@ public class PorDiaActivity extends FragmentActivity implements
+ 		getMenuInflater().inflate(R.menu.activity_por_dia, menu);
+ 		return true;
+ 	}
++	
++	@Override
++	public boolean onOptionsItemSelected(MenuItem item) {
++	    // Handle item selection
++	    switch (item.getItemId()) {
++	        case R.id.menu_about:
++	        	Intent acerca = new Intent(this, AcercaActivity.class );
++	        	startActivity(acerca);
++	            return true;
++	        default:
++	            return super.onOptionsItemSelected(item);
++	    }
++	}
++	
+ 
+ 	@Override
+ 	public void onTabSelected(ActionBar.Tab tab,
+diff --git a/src/mx/erickchias/tuvive/Sabado.java b/src/mx/erickchias/tuvive/Sabado.java
+index 820625f152585b9b0cc411cb4fde49761d620b5c..0f31755cbf80e1a6596e0fd1262a2466bfb0da40 100644
+--- a/src/mx/erickchias/tuvive/Sabado.java
++++ b/src/mx/erickchias/tuvive/Sabado.java
+@@ -39,8 +39,7 @@ public class Sabado extends ListFragment {
+ 	 public void onListItemClick(ListView l, View v, int position, long id) {
+ 	    // Do something with the data
+ 		 //Log.i("the Item clicked is at position : ",  String.valueOf(position).toString());
+-		 Intent verBanda = new Intent(getActivity(), BandaActivity.class );
+-		 verBanda.putExtra("array", String.valueOf(3));
++		 Intent verBanda = new Intent(getActivity(), SabadoBandaActivity.class );
+ 		 verBanda.putExtra("pos", String.valueOf(position));
+ 		 startActivity(verBanda);
+ 
+diff --git a/src/mx/erickchias/tuvive/SabadoBandaActivity.java b/src/mx/erickchias/tuvive/SabadoBandaActivity.java
+index 26d0cd0e6491a5e3b1518abfa207fea8f2edb0e8..567e4071a62fa51338af10f8e8529ee3149a1248 100644
+--- a/src/mx/erickchias/tuvive/SabadoBandaActivity.java
++++ b/src/mx/erickchias/tuvive/SabadoBandaActivity.java
+@@ -87,11 +87,4 @@ public class SabadoBandaActivity extends Activity {
+ 		 
+ 	}
+ 
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		// Inflate the menu; this adds items to the action bar if it is present.
+-		getMenuInflater().inflate(R.menu.activity_banda, menu);
+-		return true;
+-	}
+-
+ }
+diff --git a/src/mx/erickchias/tuvive/Viernes.java b/src/mx/erickchias/tuvive/Viernes.java
+index 0fcfff353dceba1a49c402997a3fcab8fd53a96b..cc3fec479a4ebc947b174774754c9f0bb4526cb1 100644
+--- a/src/mx/erickchias/tuvive/Viernes.java
++++ b/src/mx/erickchias/tuvive/Viernes.java
+@@ -38,8 +38,7 @@ public class Viernes extends ListFragment {
+ 	 public void onListItemClick(ListView l, View v, int position, long id) {
+ 	    // Do something with the data
+ 		 //Log.i("the Item clicked is at position : ",  String.valueOf(position).toString());
+-		 Intent verBanda = new Intent(getActivity(), BandaActivity.class );
+-		 verBanda.putExtra("array", String.valueOf(2));
++		 Intent verBanda = new Intent(getActivity(), ViernesBandaActivity.class );
+ 		 verBanda.putExtra("pos", String.valueOf(position));
+ 		 startActivity(verBanda);
+ 
+@@ -67,5 +66,7 @@ public class Viernes extends ListFragment {
+         
+         
+     }
++    
++    
+ 	
+ }
+diff --git a/src/mx/erickchias/tuvive/ViernesBandaActivity.java b/src/mx/erickchias/tuvive/ViernesBandaActivity.java
+index 1c0eefe836add6d614c5260ed56dfa9b963dec5c..01d8c7eecfb5c4b4868e1bb6dd5e94296a5d1101 100644
+--- a/src/mx/erickchias/tuvive/ViernesBandaActivity.java
++++ b/src/mx/erickchias/tuvive/ViernesBandaActivity.java
+@@ -10,6 +10,7 @@ import android.app.Activity;
+ import android.content.Intent;
+ import android.util.Log;
+ import android.view.Menu;
++import android.view.MenuItem;
+ import android.view.View;
+ import android.widget.Button;
+ import android.widget.TextView;
+@@ -89,11 +90,6 @@ public class ViernesBandaActivity extends Activity {
+ 		 
+ 	}
+ 
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		// Inflate the menu; this adds items to the action bar if it is present.
+-		getMenuInflater().inflate(R.menu.activity_banda, menu);
+-		return true;
+-	}
++	
+ 
+ }
+-- 
+1.8.0.msysgit.0
+
+

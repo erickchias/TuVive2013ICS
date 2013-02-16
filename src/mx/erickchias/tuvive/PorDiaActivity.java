@@ -2,6 +2,7 @@ package mx.erickchias.tuvive;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -82,6 +83,20 @@ public class PorDiaActivity extends FragmentActivity implements
 		getMenuInflater().inflate(R.menu.activity_por_dia, menu);
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.menu_about:
+	        	Intent acerca = new Intent(this, AcercaActivity.class );
+	        	startActivity(acerca);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+	
 
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,

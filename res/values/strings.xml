@@ -56,5 +56,8 @@
     <string name="title_section1">Section 1</string>
     <string name="title_activity_por_dia">Bandas por día</string>
     <string name="title_activity_tips">Tips</string>
+    
+    <!-- Banda -->
+    <string name="add_banda">Agregar recordatorio</string>
 
 </resources>

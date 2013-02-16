@@ -237,6 +237,9 @@ containing a value of this type.
     }
     public static final class string {
         public static final int acerca=0x7f050017;
+        /**  Banda 
+         */
+        public static final int add_banda=0x7f050033;
         public static final int app_name=0x7f05000c;
         public static final int bol_abono=0x7f050023;
         public static final int bol_abono_note=0x7f050024;

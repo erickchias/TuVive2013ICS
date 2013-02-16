@@ -38,8 +38,7 @@ public class Domingo extends ListFragment {
 	 public void onListItemClick(ListView l, View v, int position, long id) {
 	    // Do something with the data
 		 //Log.i("the Item clicked is at position : ",  String.valueOf(position).toString());
-		 Intent verBanda = new Intent(getActivity(), BandaActivity.class );
-		 verBanda.putExtra("array",String.valueOf(4));
+		 Intent verBanda = new Intent(getActivity(), DomingoBandaActivity.class );
 		 verBanda.putExtra("pos", String.valueOf(position));
 		 startActivity(verBanda);
 
