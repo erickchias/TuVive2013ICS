@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bandN" />
+
+        <TextView
+            android:id="@+id/bandaN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nulo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dayB" />
+
+        <TextView
+            android:id="@+id/diaB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nulo" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule" />
+
+        <TextView
+            android:id="@+id/horaB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nulo" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/place" />
+
+        <TextView
+            android:id="@+id/lugarB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nulo" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+ 
+</LinearLayout>

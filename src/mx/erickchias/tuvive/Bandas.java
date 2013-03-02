@@ -59,8 +59,8 @@ public class Bandas extends ListFragment {
         mItem =menu.add("Mis bandas");
        // mItem.setIcon(android.R.drawable.ic_menu_compass);
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        /*Intent lugar = new Intent(getActivity(), LugarActivity.class );
-        mItem.setIntent(lugar);*/
+        Intent lugar = new Intent(getActivity(), MisBandas.class );
+        mItem.setIntent(lugar);
         
         /*mItem =menu.add("Tips");
         //mItem.setIcon(android.R.drawable.ic_menu_view);

@@ -3,6 +3,7 @@ package mx.erickchias.tuvive;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.webkit.WebView;
 
 public class TipsActivity extends Activity {
 
@@ -10,13 +11,11 @@ public class TipsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tips);
+		
+		 WebView web = (WebView)findViewById(R.id.webView);          
+		 web.setBackgroundColor(0xF2F2F2);
+	     web.loadData(getString(R.string.tips), "text/html", "utf-8");
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_tips, menu);
-		return true;
-	}
 
 }

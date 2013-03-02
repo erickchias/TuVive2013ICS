@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="15" />
 
     <permission
@@ -48,10 +48,7 @@
             android:name="mx.erickchias.tuvive.InfoActivity"
             android:label="@string/title_activity_info" >
         </activity>
-        <activity
-            android:name="mx.erickchias.tuvive.BandasXML"
-            android:label="@string/title_activity_bandas" >
-        </activity>
+       
         <activity
             android:name="mx.erickchias.tuvive.AcercaActivity"
             android:label="@string/title_activity_acerca" >
@@ -64,15 +61,15 @@
             android:name="mx.erickchias.tuvive.JuevesBandaActivity"
             android:label="@string/title_activity_banda" >
         </activity>
-         <activity
+        <activity
             android:name="mx.erickchias.tuvive.ViernesBandaActivity"
             android:label="@string/title_activity_banda" >
         </activity>
-         <activity
+        <activity
             android:name="mx.erickchias.tuvive.SabadoBandaActivity"
             android:label="@string/title_activity_banda" >
         </activity>
-         <activity
+        <activity
             android:name="mx.erickchias.tuvive.DomingoBandaActivity"
             android:label="@string/title_activity_banda" >
         </activity>
@@ -81,19 +78,26 @@
             android:label="@string/title_activity_por_dia" >
         </activity>
 
-        <!-- test -->
+        <!-- test 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAhVyloGAbGTbnlV21lIjGAc3HNnVwznUE" />
-             
-             <!-- release
+            -->
+
+        <!--
+         release-->
          <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA2vlmFx8JovD0AaabH7eU9CrLXEGWlf38" />-->
+            android:value="AIzaSyA2vlmFx8JovD0AaabH7eU9CrLXEGWlf38" />
+        
 
         <activity
             android:name="mx.erickchias.tuvive.TipsActivity"
             android:label="@string/title_activity_tips" >
+        </activity>
+        <activity
+            android:name="mx.erickchias.tuvive.MisBandas"
+            android:label="@string/title_activity_mis_bandas" >
         </activity>
     </application>
 

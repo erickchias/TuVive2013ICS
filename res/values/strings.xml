@@ -25,6 +25,25 @@
 			</html>
 		]]>
     </string>
+    <string name="tips">
+<![CDATA[
+        	<html>
+ 			<head></head>
+ 			<body style="text-align:justify;color:white;background-color:#000000;">
+ 			<p>Para una mejor convivencia entre todos los asistentes, te sugerimos lo siguiente:</p>
+ 				<ul>
+ 					<li>Usa bloqueador y gorra para evitar broncearte mucho.</li>
+ 					<li>Lentes de sol, aparte de hacerte ver mejor, ayudaran a tu vista.</li>
+ 					<li>Las camaras digitales de fotograf&iacute;a estan permitidas para tus mejores fotos. <font color="red">NO PROFESIONALES NI DE VIDEO</font></li>
+					<li>Ponte de acuerdo con tus amigos para fijar un punto de reuni&oacute;n para verse despu&eacute;s del slam, o por si se separan por bandas diferentes.</li>
+ 					<li>Evita problemas, <font color="red">NO</font> ingreses con armas de fuego, armas blancas, drogas, instrumentos, mochilas, banderas, petardos, comida, bebida o mascotas.</li>
+ 					<li><font color="#00FFFF">Conoce a mucha gente, y divierte :)</font></li>
+ 				</ul>
+ 			</body>
+			</html>
+		]]>
+    </string>
+    
     <!-- Tabs -->
     <string name="tab1">EVENTO</string>
     <string name="tab2">BANDAS</string>
@@ -39,10 +58,10 @@
     <string name="title_info1">Boletos</string>
     <string name="title_info2">Boletos VIP</string>
     <string name="bol_general">entrada general por día</string>
-    <string name="cto_bol_general">$550.00</string>
+    <string name="cto_bol_general">$600.00</string>
     <string name="bol_abono">abono general 3 días</string>
     <string name="bol_abono_note">(viernes, sábado y domingo)</string>
-    <string name="cto_bol_abono">$1,300.00</string>
+    <string name="cto_bol_abono">$1,400.00</string>
     <string name="bol_jueves">boleto único para el jueves</string>
     <string name="cto_bol_jueves">$550.00</string>
     <string name="bol_vip">boleto vip por día</string>
@@ -56,8 +75,16 @@
     <string name="title_section1">Section 1</string>
     <string name="title_activity_por_dia">Bandas por día</string>
     <string name="title_activity_tips">Tips</string>
-    
+
     <!-- Banda -->
     <string name="add_banda">Agregar recordatorio</string>
+    <string name="add_my_bands">Agregar a mis bandas</string>
+    <string name="remove_my_bands">Quitar de mis bandas</string>
+    <string name="bandN">Banda:</string>
+    <string name="dayB">Día:</string>
+    <string name="schedule">Hora:</string>
+    <string name="place">Escenario:</string>
+    <string name="title_activity_mis_bandas">Mis Bandas</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
