@@ -15,7 +15,4 @@ public class AcercaActivity extends Activity {
 		 web.setBackgroundColor(0xF2F2F2);
 	     web.loadData(getString(R.string.acerca), "text/html", "utf-8");
 	}
-
-	
-
 }

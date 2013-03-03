@@ -191,7 +191,7 @@ containing a value of this type.
         public static final int tab_unselected_focused_tuvive=0x7f020028;
         public static final int tab_unselected_pressed_tuvive=0x7f020029;
         public static final int vivelatino=0x7f02002a;
-        public static final int vivelatino1=0x7f02002b;
+        public static final int vivelatino01=0x7f02002b;
         public static final int wc=0x7f02002c;
     }
     public static final class id {
@@ -266,19 +266,19 @@ containing a value of this type.
     }
     public static final class string {
         public static final int acerca=0x7f050017;
-        public static final int action_settings=0x7f05003c;
+        public static final int action_settings=0x7f05003e;
         /**  Banda 
          */
-        public static final int add_banda=0x7f050034;
-        public static final int add_my_bands=0x7f050035;
+        public static final int add_banda=0x7f050036;
+        public static final int add_my_bands=0x7f050037;
         public static final int app_name=0x7f05000c;
-        public static final int bandN=0x7f050037;
-        public static final int bol_abono=0x7f050024;
-        public static final int bol_abono_note=0x7f050025;
-        public static final int bol_abono_vip=0x7f05002b;
-        public static final int bol_general=0x7f050022;
-        public static final int bol_jueves=0x7f050027;
-        public static final int bol_vip=0x7f050029;
+        public static final int bandN=0x7f050039;
+        public static final int bol_abono=0x7f050026;
+        public static final int bol_abono_note=0x7f050027;
+        public static final int bol_abono_vip=0x7f05002d;
+        public static final int bol_general=0x7f050024;
+        public static final int bol_jueves=0x7f050029;
+        public static final int bol_vip=0x7f05002b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=30] 
@@ -322,50 +322,52 @@ containing a value of this type.
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
         public static final int common_google_play_services_update_title=0x7f050007;
-        public static final int cto_bol_abono=0x7f050026;
-        public static final int cto_bol_abono_vip=0x7f05002c;
-        public static final int cto_bol_general=0x7f050023;
-        public static final int cto_bol_jueves=0x7f050028;
-        public static final int cto_bol_vip=0x7f05002a;
-        public static final int dayB=0x7f050038;
+        public static final int cto_bol_abono=0x7f050028;
+        public static final int cto_bol_abono_vip=0x7f05002e;
+        public static final int cto_bol_general=0x7f050025;
+        public static final int cto_bol_jueves=0x7f05002a;
+        public static final int cto_bol_vip=0x7f05002c;
+        public static final int dayB=0x7f05003a;
         public static final int dia1=0x7f050013;
         public static final int dia2=0x7f050014;
         public static final int dia3=0x7f050015;
         public static final int dia4=0x7f050016;
-        public static final int evento_tab1=0x7f05001c;
-        public static final int evento_tab2=0x7f05001d;
-        public static final int evento_tab3=0x7f05001e;
-        public static final int hello_world=0x7f05001f;
+        public static final int evento_tab1=0x7f05001e;
+        public static final int evento_tab2=0x7f05001f;
+        public static final int evento_tab3=0x7f050020;
+        public static final int hello_world=0x7f050021;
         /**  Evento 
          */
         public static final int info_vive=0x7f05001b;
+        public static final int info_vive2=0x7f05001c;
+        public static final int info_vive3=0x7f05001d;
         public static final int menu_about=0x7f05000d;
         public static final int menu_donar=0x7f05000e;
-        public static final int menu_settings=0x7f05002d;
+        public static final int menu_settings=0x7f05002f;
         /**  General 
          */
         public static final int nulo=0x7f05000b;
-        public static final int place=0x7f05003a;
-        public static final int remove_my_bands=0x7f050036;
-        public static final int schedule=0x7f050039;
+        public static final int place=0x7f05003c;
+        public static final int remove_my_bands=0x7f050038;
+        public static final int schedule=0x7f05003b;
         /**  Tabs 
          */
         public static final int tab1=0x7f050019;
         public static final int tab2=0x7f05001a;
         public static final int tips=0x7f050018;
         public static final int title_activity_acerca=0x7f050012;
-        public static final int title_activity_banda=0x7f05002e;
+        public static final int title_activity_banda=0x7f050030;
         public static final int title_activity_bandas=0x7f050011;
         public static final int title_activity_info=0x7f050010;
         public static final int title_activity_lugar=0x7f05000f;
-        public static final int title_activity_mis_bandas=0x7f05003b;
-        public static final int title_activity_por_dia=0x7f050032;
-        public static final int title_activity_tips=0x7f050033;
-        public static final int title_info1=0x7f050020;
-        public static final int title_info2=0x7f050021;
-        public static final int title_section1=0x7f050031;
-        public static final int title_section2=0x7f050030;
-        public static final int title_section3=0x7f05002f;
+        public static final int title_activity_mis_bandas=0x7f05003d;
+        public static final int title_activity_por_dia=0x7f050034;
+        public static final int title_activity_tips=0x7f050035;
+        public static final int title_info1=0x7f050022;
+        public static final int title_info2=0x7f050023;
+        public static final int title_section1=0x7f050033;
+        public static final int title_section2=0x7f050032;
+        public static final int title_section3=0x7f050031;
     }
     public static final class style {
         /** 

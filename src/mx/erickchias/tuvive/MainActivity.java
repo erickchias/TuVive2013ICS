@@ -55,7 +55,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.menu_about:
 	        	Intent acerca = new Intent(this, AcercaActivity.class );

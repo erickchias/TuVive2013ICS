@@ -15,7 +15,6 @@ public class Evento extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater li,ViewGroup vg,Bundle bun){
 		View view = li.inflate(R.layout.info_evento, vg, false);
-        
         setHasOptionsMenu(true);
         return view;
     }

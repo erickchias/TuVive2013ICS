@@ -3,21 +3,19 @@ package mx.erickchias.tuvive;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class LugarActivity extends android.support.v4.app.FragmentActivity {
 
+	@SuppressWarnings("static-access")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,11 +27,9 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		        .target(foro)   
 		        .zoom(17)       
 		        .bearing(-45)    
-		        /*.tilt(90)*/
 		        .build();
 		 
-		CameraUpdate camUpd3 =
-		    CameraUpdateFactory.newCameraPosition(camPos);
+		CameraUpdate camUpd3=CameraUpdateFactory.newCameraPosition(camPos);
 		 
 		map.setMapType(map.MAP_TYPE_HYBRID);
 		map.animateCamera(camUpd3);
@@ -73,7 +69,6 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
         .position(new LatLng(19.405057898754002,-99.09224331378937))
         .title("Carpa Sonidero Doritos")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.festival)));
-		
 		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.40376261466774,-99.09507036209106))
@@ -145,36 +140,30 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
 		
-		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.40547279225678,-99.09217357635498))
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
-		
 		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.405981288338122,-99.09359246492386))
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
 		
-		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.406140667379674,-99.09505158662796))
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
-		
 		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.40761554856048,-99.09458756446838))
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
 		
-		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.404625295255187,-99.09686744213104))
         .title("Comida")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.fastfood)));
-		
 		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.40355010613743,-99.0939062833786))
@@ -240,12 +229,6 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
         .position(new LatLng(19.405093316533357,-99.09673869609833))
         .title("Cajeros")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.firstaid)));
-		
-		
-		
-		
-		//CameraUpdate camUpd1 =CameraUpdateFactory.newLatLng(new LatLng(37.0625,-95.677068));
-		//map.moveCamera(camUpd1);
 				
 	}
 
@@ -257,7 +240,6 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.menu_about:
 	        	Intent acerca = new Intent(this, AcercaActivity.class );

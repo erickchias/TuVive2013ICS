@@ -2,7 +2,6 @@ package mx.erickchias.tuvive;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.webkit.WebView;
 
 public class TipsActivity extends Activity {
@@ -16,6 +15,4 @@ public class TipsActivity extends Activity {
 		 web.setBackgroundColor(0xF2F2F2);
 	     web.loadData(getString(R.string.tips), "text/html", "utf-8");
 	}
-
-
 }

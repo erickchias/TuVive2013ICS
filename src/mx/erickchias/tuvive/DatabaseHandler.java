@@ -8,7 +8,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
  
 public class DatabaseHandler extends SQLiteOpenHelper {
 	 
@@ -35,29 +34,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_BANDS);
- 
-        // Create tables again
         onCreate(db);
     }
     
     void addBanda(Banda banda) {
         SQLiteDatabase db = this.getWritableDatabase();
- 
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, banda.getName()); 
         values.put(KEY_DAY, banda.getDay());
         values.put(KEY_SCHEDULE, banda.getSchedule());
         values.put(KEY_PLACE, banda.getPlace()); 
- 
         db.insert(TABLE_BANDS, null, values);
         db.close();
     }
  
     Banda getBanda(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
- 
+    	SQLiteDatabase db = this.getReadableDatabase();
+    	
         Cursor cursor = db.query(TABLE_BANDS, new String[] { KEY_ID,
                 KEY_NAME, KEY_DAY, KEY_PLACE }, KEY_ID + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
@@ -69,7 +63,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return banda;
     }
     
-    int getBanda(String name) {
+    @SuppressWarnings("null")
+	int getBanda(String name) {
         SQLiteDatabase db = this.getReadableDatabase();
         String selectQuery = "SELECT  * FROM " + TABLE_BANDS +" WHERE " + KEY_NAME +" = '" + name + "'";
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -81,9 +76,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
     }
     
-    
-    
- 
     public List<Banda> getAllBandas() {
         List<Banda> bandaList = new ArrayList<Banda>();
         String selectQuery = "SELECT  * FROM " + TABLE_BANDS;
@@ -119,7 +111,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
     }
     
- 
     public int updateBanda(Banda banda) {
         SQLiteDatabase db = this.getWritableDatabase();
  
@@ -139,6 +130,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[] { String.valueOf(banda.getID()) });
         db.close();
     }
+    
     public void borraBanda(Banda banda) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_BANDS, KEY_NAME + " = ?",

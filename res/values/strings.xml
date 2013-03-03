@@ -51,6 +51,8 @@
     <!-- Evento -->
     <string name="info_vive">En este año el evento se llevará a cabo los días 14,15,16 y 17 de Marzo, como es costumbre
         tendrá lugar en el Foro Sol. </string>
+    <string name="info_vive2">En esta ocasión se agregan dos nuevos escenarios a los que ya estamos acostumbrados, teniendo en total el Escenario Indio, Escenario Unión Indio, Carpa Danup, Carpa Intolerante, Carpa Sonidero Doritos, Carpa Cabo San Roque, Carpa Ambulante.</string>
+	<string name="info_vive3">También como es costumbre encontraremos el tianguis cultural del Chopo, merchandise oficial del evento y de las bandas, firma de autografos y muchas cosas más.</string>
     <string name="evento_tab1">INFO</string>
     <string name="evento_tab2">BOLETOS</string>
     <string name="evento_tab3">LUAGR</string>
