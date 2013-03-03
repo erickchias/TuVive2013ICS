@@ -1,11 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+     <item
+        android:id="@+id/menu_simbologia"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_sim"/>
     <item
         android:id="@+id/menu_about"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/menu_about"/>
+    
+   
     
 
 </menu>

@@ -3,11 +3,12 @@
 
     <!-- General -->
     <string name="nulo"></string>
-    <string name="app_name">Tu Vive 2013</string>
+    <string name="app_name">Vive 2013</string>
     <string name="menu_about">Acerca de</string>
     <string name="menu_donar">Donar</string>
-    <string name="title_activity_lugar">Lugar</string>
-    <string name="title_activity_info">Información</string>
+    <string name="menu_sim">Simbologia</string>
+    <string name="title_activity_lugar">Mapa</string>
+    <string name="title_activity_info">Boletos</string>
     <string name="title_activity_bandas">Bandas</string>
     <string name="title_activity_acerca">Acerca de</string>
     <string name="dia1">jueves 14</string>
@@ -36,14 +37,14 @@
  					<li>Lentes de sol, aparte de hacerte ver mejor, ayudaran a tu vista.</li>
  					<li>Las camaras digitales de fotograf&iacute;a estan permitidas para tus mejores fotos. <font color="red">NO PROFESIONALES NI DE VIDEO</font></li>
 					<li>Ponte de acuerdo con tus amigos para fijar un punto de reuni&oacute;n para verse despu&eacute;s del slam, o por si se separan por bandas diferentes.</li>
- 					<li>Evita problemas, <font color="red">NO</font> ingreses con armas de fuego, armas blancas, drogas, instrumentos, mochilas, banderas, petardos, comida, bebida o mascotas.</li>
+ 					<li>Evita problemas, <font color="red">NO</font> ingreses con armas de fuego, armas blancas, instrumentos, mochilas, banderas, petardos, comida, bebida o mascotas.</li>
  					<li><font color="#00FFFF">Conoce a mucha gente, y divierte :)</font></li>
  				</ul>
  			</body>
 			</html>
 		]]>
     </string>
-    
+
     <!-- Tabs -->
     <string name="tab1">EVENTO</string>
     <string name="tab2">BANDAS</string>
@@ -52,7 +53,7 @@
     <string name="info_vive">En este año el evento se llevará a cabo los días 14,15,16 y 17 de Marzo, como es costumbre
         tendrá lugar en el Foro Sol. </string>
     <string name="info_vive2">En esta ocasión se agregan dos nuevos escenarios a los que ya estamos acostumbrados, teniendo en total el Escenario Indio, Escenario Unión Indio, Carpa Danup, Carpa Intolerante, Carpa Sonidero Doritos, Carpa Cabo San Roque, Carpa Ambulante.</string>
-	<string name="info_vive3">También como es costumbre encontraremos el tianguis cultural del Chopo, merchandise oficial del evento y de las bandas, firma de autografos y muchas cosas más.</string>
+    <string name="info_vive3">También como es costumbre encontraremos el tianguis cultural del Chopo, merchandise oficial del evento y de las bandas, firma de autografos y muchas cosas más.</string>
     <string name="evento_tab1">INFO</string>
     <string name="evento_tab2">BOLETOS</string>
     <string name="evento_tab3">LUAGR</string>
@@ -88,5 +89,13 @@
     <string name="place">Escenario:</string>
     <string name="title_activity_mis_bandas">Mis Bandas</string>
     <string name="action_settings">Settings</string>
-
+    <string name="title_activity_sim">Simbologia</string>
+	<string name="map1">Escenario</string>
+	<string name="map2">Información</string>
+	<string name="map3">Servicio médico</string>
+	<string name="map4">Comida</string>
+	<string name="map5">Merchandise y puntos de interes</string>
+	<string name="map6">Tianguis del Chopo</string>
+	<string name="map7">Recoleción de vasos</string>
+	<string name="map8">Sanitarios</string>
 </resources>

@@ -26,7 +26,7 @@ public class Evento extends Fragment {
         Intent info = new Intent(getActivity(), InfoActivity.class );
         mItem.setIntent(info);
         
-        mItem =menu.add("Lugar");
+        mItem =menu.add("Mapa");
         mItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         Intent lugar = new Intent(getActivity(), LugarActivity.class );
         mItem.setIntent(lugar);

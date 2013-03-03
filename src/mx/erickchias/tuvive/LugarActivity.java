@@ -9,9 +9,11 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.os.Bundle;
+import android.app.Dialog;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class LugarActivity extends android.support.v4.app.FragmentActivity {
 
@@ -33,6 +35,7 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		 
 		map.setMapType(map.MAP_TYPE_HYBRID);
 		map.animateCamera(camUpd3);
+		
 		
 		
 		map.addMarker(new MarkerOptions()
@@ -227,9 +230,10 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 		
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(19.405093316533357,-99.09673869609833))
-        .title("Cajeros")
+        .title("Servicio médico")
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.firstaid)));
 				
+		Toast.makeText(getApplicationContext(), "Pulsa sobre cualquier icono para más información.", Toast.LENGTH_LONG).show();
 	}
 
 	@Override
@@ -241,6 +245,12 @@ public class LugarActivity extends android.support.v4.app.FragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
+		    case R.id.menu_simbologia:
+		    	Dialog dialog = new Dialog(this);
+		    	dialog.setContentView(R.layout.activity_sim);
+		    	dialog.setTitle("Simbologia");
+		    	dialog.show();
+	            return true;
 	        case R.id.menu_about:
 	        	Intent acerca = new Intent(this, AcercaActivity.class );
 	        	startActivity(acerca);

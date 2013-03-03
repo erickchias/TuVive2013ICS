@@ -18,55 +18,55 @@
 
 <resources>
 
-    <style name="Theme.tuvive" parent="@android:style/Theme.Holo">
+    <style name="Theme.Tuvive" parent="@android:style/Theme.Holo">
         <item name="android:actionBarItemBackground">@drawable/selectable_background_tuvive</item>
-        <item name="android:popupMenuStyle">@style/tuvive_PopupMenu</item>
-        <item name="android:dropDownListViewStyle">@style/tuvive_DropDownListView</item>
-        <item name="android:actionBarTabStyle">@style/tuvive_ActionBarTabStyle</item>
-        <item name="android:actionDropDownStyle">@style/tuvive_DropDownNav</item>
-        <item name="android:actionBarStyle">@style/tuvive_solid_ActionBar</item>
-        <item name="android:panelBackground">@drawable/menu_hardkey_panel_tuvive</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Tuvive</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Tuvive</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tuvive</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Tuvive</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Tuvive</item>
+        
         
     </style>
 
-    <style name="tuvive_solid_ActionBar" parent="@android:style/Widget.Holo.ActionBar.Solid">
+    <style name="ActionBar.Solid.Tuvive" parent="@android:style/Widget.Holo.ActionBar.Solid">
         <item name="android:background">@drawable/ab_solid_tuvive</item>
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_tuvive</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_tuvive</item>
-        <item name="android:progressBarStyle">@style/tuvive_ProgressBar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Tuvive</item>
     </style>
 
-    <style name="tuvive_transparent_ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+    <style name="ActionBar.Transparent.Tuvive" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">@drawable/ab_transparent_tuvive</item>
-        <item name="android:progressBarStyle">@style/tuvive_ProgressBar</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Tuvive</item>
     </style>
 
-    <style name="tuvive_PopupMenu" parent="@android:style/Widget.Holo.ListPopupWindow">
+    <style name="PopupMenu.Tuvive" parent="@android:style/Widget.Holo.ListPopupWindow">
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_tuvive</item>	
     </style>
 
-    <style name="tuvive_DropDownListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+    <style name="DropDownListView.Tuvive" parent="@android:style/Widget.Holo.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_tuvive</item>
     </style>
 
-    <style name="tuvive_ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+    <style name="ActionBarTabStyle.Tuvive" parent="@android:style/Widget.Holo.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_tuvive</item>
     </style>
 
-    <style name="tuvive_DropDownNav" parent="@android:style/Widget.Holo.Spinner">
+    <style name="DropDownNav.Tuvive" parent="@android:style/Widget.Holo.Spinner">
         <item name="android:background">@drawable/spinner_background_ab_tuvive</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_tuvive</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_tuvive</item>
     </style>
     
-    <style name="tuvive_ProgressBar" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+    <style name="ProgressBar.Tuvive" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_tuvive</item>
     </style>
 
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
-    <style name="Theme.tuvive.widget" parent="@android:style/Theme.Holo">
-        <item name="android:popupMenuStyle">@style/tuvive_PopupMenu</item>
-        <item name="android:dropDownListViewStyle">@style/tuvive_DropDownListView</item>
+    <style name="Theme.Tuvive.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Tuvive</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Tuvive</item>
     </style>
 
 </resources>
