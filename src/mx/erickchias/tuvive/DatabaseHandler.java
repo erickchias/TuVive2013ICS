@@ -137,6 +137,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[] { String.valueOf(banda.getName()) });
         db.close();
     }
+    
+    public void borraBanda(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_BANDS, KEY_NAME + " = ?", new String[] { String.valueOf(name) });
+        db.close();
+    }
  
     public int getBandasCount() {
         String countQuery = "SELECT  * FROM " + TABLE_BANDS;

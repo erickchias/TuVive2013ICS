@@ -20,8 +20,16 @@
         	<html>
  			<head></head>
  			<body style="text-align:justify;color:white;background-color:#000000;">
- 				<p>Tu Vive 2013 es una aplicaci&oacute;n NO oficial con fines &uacute;nicamente informativos para el Festival Vive Latino 2013. Toda la informaci&oacute;n aqu&iacute; mostrada es de dominio p&uacute;blico, la aplicaci&oacute;n no tiene otra intenci&oacute;n m&aacute;s que hacer llegar la informaci&oacute;n a los asistentes e interesados en este evento.</p> <br>Creditos: <ul><li>Erick Chias (@erickchias)</li><li>Divani Fuentes (@Divarolas)</li></ul><p>Si te gusta nuestro trabajo puedes comprarnos una cerveza :)</p>
-
+ 				<p>Vive 2013 es una aplicaci&oacute;n <font color="red">NO</font> oficial con fines &uacute;nicamente informativos para el Festival Vive Latino 2013. Toda la informaci&oacute;n aqu&iacute; mostrada es de dominio p&uacute;blico, la aplicaci&oacute;n no tiene otra intenci&oacute;n m&aacute;s que hacer llegar la informaci&oacute;n a los asistentes e interesados en este evento.</p>
+ 				<p>Desarrollada por:</p>
+ 				<ul>
+ 					<li>Erick Chias (@erickchias)</li>
+ 					<li>Divani Fuentes (@Divarolas)</li>
+ 				</ul>
+ 				<p>Si te gusta nuestro trabajo puedes comprarnos una cerveza :)</p>
+ 				<p>Iconos en el mapa tomados de <a href="http://mapicons.nicolasmollet.com">mapicons collection</a></p>
+ 				<p>Las im&aacute;genes e informaci&oacute;n aqu&iacute; mostradas fueron tomadas de internet, de caracter p&uacute;blico y sin fines de lucro.</p>
+ 				<p>La aplicaci&oacute;n y los desarrolladores no son responsables por cualquier cambio de horario o imprevisto con las bandas y eventos por desici&oacute;n de sus organizadores.</p>
  			</body>
 			</html>
 		]]>
@@ -50,9 +58,8 @@
     <string name="tab2">BANDAS</string>
 
     <!-- Evento -->
-    <string name="info_vive">En este año el evento se llevará a cabo los días 14,15,16 y 17 de Marzo, como es costumbre
-        tendrá lugar en el Foro Sol. </string>
-    <string name="info_vive2">En esta ocasión se agregan dos nuevos escenarios a los que ya estamos acostumbrados, teniendo en total el Escenario Indio, Escenario Unión Indio, Carpa Danup, Carpa Intolerante, Carpa Sonidero Doritos, Carpa Cabo San Roque, Carpa Ambulante.</string>
+    <string name="info_vive">En este año el evento se llevará a cabo los días 14,15,16 y 17 de Marzo, y al igual que en ediciones pasadas tendrá lugar en el Foro Sol. </string>
+    <string name="info_vive2">En esta ocasión se agregan dos nuevos escenarios a los ya conocidos, teniendo en total el Escenario Indio, Escenario Unión Indio, Carpa Danup, Carpa Intolerante, Carpa Sonidero Doritos, Carpa Cabo San Roque, Carpa Ambulante.</string>
     <string name="info_vive3">También como es costumbre encontraremos el tianguis cultural del Chopo, merchandise oficial del evento y de las bandas, firma de autografos y muchas cosas más.</string>
     <string name="evento_tab1">INFO</string>
     <string name="evento_tab2">BOLETOS</string>

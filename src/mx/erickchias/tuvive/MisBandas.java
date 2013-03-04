@@ -2,12 +2,15 @@ package mx.erickchias.tuvive;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MisBandas extends Activity {
 	private DatabaseHandler dbHelper;
@@ -42,17 +45,27 @@ public class MisBandas extends Activity {
 		 
 		  listView.setOnItemClickListener(new OnItemClickListener() {
 		   @Override
-		   public void onItemClick(AdapterView<?> listView, View view, 
-		     int position, long id) {
-		 /*  // Get the cursor, positioned to the corresponding row in the result set
-		   Cursor cursor = (Cursor) listView.getItemAtPosition(position);
-		 
-		   // Get the state's capital from this row in the database.
-		   String countryCode = 
-		    cursor.getString(cursor.getColumnIndexOrThrow("id"));
-		   Toast.makeText(getApplicationContext(),
-		     countryCode, Toast.LENGTH_SHORT).show();*/
-		 
+		   public void onItemClick(AdapterView<?> listView, View view, int position, long id) {
+			   Cursor cursor = (Cursor) listView.getItemAtPosition(position);
+			   final String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+			   
+			   AlertDialog.Builder myAlertDialog = new AlertDialog.Builder(MisBandas.this);
+			   myAlertDialog.setTitle("Eliminar banda");
+			   myAlertDialog.setMessage("¿Deseas borrar a '"+name+"' de Mis Bandas?");
+			   myAlertDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+				   public void onClick(DialogInterface arg0, int arg1) {
+					   dbHelper.borraBanda(name);
+					   displayListView();
+					   Toast.makeText(getApplicationContext(), "Banda borrada correctamente.", Toast.LENGTH_LONG).show();
+				   }
+			   });
+			   myAlertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+				   public void onClick(DialogInterface arg0, int arg1) {
+				   }
+			   });
+			   myAlertDialog.show();
+			   
+			   
 		   }
 		  });
 	 }
