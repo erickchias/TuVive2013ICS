@@ -2,11 +2,14 @@ package mx.erickchias.tuvive;
 
 import java.util.Calendar;
 
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.provider.CalendarContract.Events;
+import android.provider.CalendarContract.Reminders;
 import android.app.Activity;
-import android.content.Intent;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.text.format.Time;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -84,17 +87,27 @@ public class DomingoBandaActivity extends Activity {
 		Button bt = (Button)findViewById(R.id.button1);
 		bt.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0){
-				Intent calIntent = new Intent(Intent.ACTION_INSERT);
-				calIntent.setType("vnd.android.cursor.item/event");
-				calIntent.putExtra(Events.TITLE, name);
-				calIntent.putExtra(Events.EVENT_LOCATION, txt_escenario);
-				calIntent.putExtra(Events.DESCRIPTION, "Presentación de "+name+" en el festival VL 2013.");
-				calIntent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, false);
-				calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,inicio.getTimeInMillis());
-				calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,fin.getTimeInMillis());
-				calIntent.putExtra(Events.ACCESS_LEVEL, Events.ACCESS_PRIVATE);
-				calIntent.putExtra(Events.AVAILABILITY, Events.AVAILABILITY_BUSY);
-				startActivity(calIntent);
+				ContentResolver cr = getContentResolver();
+                ContentValues values = new ContentValues();
+                values.put(Events.DTSTART,inicio.getTimeInMillis());
+                values.put(Events.DTEND, fin.getTimeInMillis());
+                values.put(Events.TITLE, name);
+                values.put(Events.DESCRIPTION, "Presentación de "+name+" en el festival VL 2013.");
+                values.put(Events.CALENDAR_ID, 1);
+                values.put(Events.EVENT_TIMEZONE, Time.getCurrentTimezone());
+                values.put(Events.EVENT_LOCATION, txt_escenario);  
+                values.put(Events.ALL_DAY, false);
+                values.put(Events.STATUS, 1);
+                values.put(Events.HAS_ALARM, 1);
+                Uri uri = cr.insert(Events.CONTENT_URI, values);
+
+                values = new ContentValues();
+                values.put("event_id", Long.parseLong(uri.getLastPathSegment()));
+                values.put("method", 4);
+                values.put("minutes", 15);
+                cr.insert(Reminders.CONTENT_URI, values);
+                
+                Toast.makeText(getApplicationContext(), "Recordatorio agregado correctamente.", Toast.LENGTH_LONG).show();
 	            }
 	       });
 		 
