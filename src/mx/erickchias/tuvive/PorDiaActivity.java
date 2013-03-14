@@ -93,18 +93,14 @@ import android.view.MenuItem;
 			position = position+1;
 			switch (position) {
 			case 1:
-				mFragment = new Jueves();
-				mFragment.setArguments(null);
-				return mFragment;
-			case 2:
 				mFragment = new Viernes();
 				mFragment.setArguments(null);
 				return mFragment;
-			case 3:
+			case 2:
 				mFragment = new Sabado();
 				mFragment.setArguments(null);
 				return mFragment;
-			case 4:
+			case 3:
 				mFragment = new Domingo();
 				mFragment.setArguments(null);
 				return mFragment;
@@ -115,19 +111,17 @@ import android.view.MenuItem;
 		}
 		@Override
 		public int getCount() {
-			return 4;
+			return 3;
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
 			switch (position) {
 			case 0:
-				return getString(R.string.dia1).toUpperCase();
-			case 1:
 				return getString(R.string.dia2).toUpperCase();
-			case 2:
+			case 1:
 				return getString(R.string.dia3).toUpperCase();
-			case 3:
+			case 2:
 				return getString(R.string.dia4).toUpperCase();
 			
 			}

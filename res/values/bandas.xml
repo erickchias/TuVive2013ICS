@@ -43,7 +43,7 @@
 		<item>carla morrison|Sábado|19:45|20:45|indio|No disponible|No disponible|No disponible</item>
 		<item>celso piña|Domingo|16:45|17:35|indio|No disponible|No disponible|No disponible</item>
 		<item>
-              centavrvs|Jueves|19:00|19:35|unión indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
+              centavrvs|Viernes|14:00|14:25|indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
               Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
               donde el folclore y la cultura popular mexicana se fusionan con diversos ritmos como la cumbia, la chicha, el afrobeat, los sonidos tribales y brasileños.
               Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.
@@ -75,7 +75,7 @@
 		<item>esteman|Domingo|21:55|22:30|carpa intolerante|No disponible|No disponible|No disponible</item>
 		<item>estrambóticos|Viernes|14:30|15:00|indio|No disponible|No disponible|No disponible</item>
 		<item>
-		    enjambre|Jueves|20:50|21:50|unión indio|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		    enjambre|Viernes|22:00|23:00|carpa danup|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
 		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
 		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
 		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
@@ -140,14 +140,6 @@
 		<item>memory man (sergio acosta zoé)|Sábado|16:30|17:30|carpa sonidero doritos|No disponible|No disponible|No disponible</item>
 		<item>mompox|Sábado|19:50|20:25|carpa intolerante|No disponible|No disponible|No disponible</item>
 		<item>monsieur periné|Domingo|18:55|19:25|carpa danup|No disponible|No disponible|No disponible</item>
-		<item>
-		    morrissey|Jueves|22:10|23:20|unión indio|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
-		    Es en 1987, cuando se da la separacion de la banda, que inicia su carrera como solista.
-		    Una de las figuras más icónicas y uno de los artistas alternativos con mayor influencia en las últimas décadas.
-		    Muchos lo han calificado de polémico, arrogante, crítico e irónico, pero lo que si es un hecho, es que ha dejado un gran legado en su natal manchester. 
-		    Su primer album como solista "viva hate" en 1988 y su ultimo disco de estudio en febrero del 2009 "Years of refusal".| Después su primer disco, Morrissey se asoció con el ex productor de The Smiths Stephen Street, Vini Reilly de The Durutti Column y el baterista Andrew Paresi.
-		    Morrissey es un ávido defensor de los derechos de los animales desde los 11 años.
-		</item>
 		<item>mostro|Viernes|19:20|19:55|carpa intolerante|No disponible|No disponible|No disponible</item>
 		<item>motor|Domingo|16:40|17:15|carpa intolerante|No disponible|No disponible|No disponible</item>
 		<item>nabuzenko|Domingo|14:00|14:35|carpa intolerante|No disponible|No disponible|No disponible</item>
@@ -164,7 +156,7 @@
 		<item>pato machete|Domingo|14:10|14:40|indio|No disponible|No disponible|No disponible</item>
 		<item>papi perez|Domingo|15:40|16:30|carpa sonidero doritos|No disponible|No disponible|No disponible</item>
 		<item>
-		    pegasvs|Jueves|19:55|20:30|unión indio|Electronica|Duo formado por Sergio y Luciana,
+		    pegasvs|Viernes|14:20|14:45|unión indio|Electronica|Duo formado por Sergio y Luciana,
 		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
 		    Sus referentes son los grupos alemanes de krautrock de los 70\'s y pop "ensoñador".
 		    juntos han facturado un disco repleto de cañonazos de retropop con una sala de máquinas de todo tipo.
@@ -217,42 +209,7 @@
 		<item>yokozuna|Sábado|17:40|18:10|carpa danup|No disponible|No disponible|No disponible</item>
 		<item>!deladap|Viernes|22:00|22:35|carpa danup|No disponible|No disponible|No disponible</item>
     </string-array>
-    <string-array name="bandasJueves">
-        <item>
-              centavrvs|Jueves|19:00|19:35|unión indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
-              Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
-              donde el folclore y la cultura popular mexicana se fusionan con diversos ritmos como la cumbia, la chicha, el afrobeat, los sonidos tribales y brasileños.
-              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.
-              |Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
-              “Considero que es mejor hacer las cosas con lo que tienes, a nunca hacerlas. Te puedes esperar y ahorrar para un estudio bien chingón, pero igual nunca pasará. 
-              Es un aprendizaje muy cabrón.” 
-        </item>
-		<item>
-		    enjambre|Jueves|20:50|21:50|unión indio|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
-		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
-		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
-		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
-		    del publico y ya no tan solo en el ambito "indie" si no tambien difundida en medios de comunicacion masiva.
-		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
-		</item>
-		<item>
-		    morrissey|Jueves|22:10|23:20|unión indio|Rock|Steven Patrick Morrissey cantante y letrista britanico que salto a la fama en los años 80\'s como lider de la banda The Smiths.
-		    Es en 1987, cuando se da la separacion de la banda, que inicia su carrera como solista.
-		    Una de las figuras más icónicas y uno de los artistas alternativos con mayor influencia en las últimas décadas.
-		    Muchos lo han calificado de polémico, arrogante, crítico e irónico, pero lo que si es un hecho, es que ha dejado un gran legado en su natal manchester. 
-		    Su primer album como solista "viva hate" en 1988 y su ultimo disco de estudio en febrero del 2009 "Years of refusal".| Después su primer disco, Morrissey se asoció con el ex productor de The Smiths Stephen Street, Vini Reilly de The Durutti Column y el baterista Andrew Paresi.
-		    Morrissey es un ávido defensor de los derechos de los animales desde los 11 años.
-		</item>
-		<item>
-		    pegasvs|Jueves|19:55|20:30|unión indio|Electronica|Duo formado por Sergio y Luciana,
-		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
-		    Sus referentes son los grupos alemanes de krautrock de los 70\'s y pop "ensoñador".
-		    juntos han facturado un disco repleto de cañonazos de retropop con una sala de máquinas de todo tipo.
-		    Con su primer disco Pegasvs nos traen rolas muy buenas como son "La melodia del afilador" o "El final de la noche". |
-		    Sergio hizo música hardcore, punk, bluegrass en bandas como Thelemáticos, Anticonceptivas o incluso The Sad Believers, entre muchos otros proyectos.
-		    Luciana participó en los primeros, pero tambien en la banda Sibyl Vane.    
-		</item>
-    </string-array>
+    
     <string-array name="bandasViernes">
    	   <item>
     	    apolo|Viernes|16:10|16:35|carpa danup|Rock|Banda originaria de chihuahua con sus inicios desde el 2007 promocionan su ep de titulo "Homonimo" y trabajan en los temas que conformaran su primer album.
@@ -299,6 +256,16 @@
 		    |Dar voz a los objetos. Es la tarea que el grupo CaboSan Roque, integrado por los españoles Roger Aixut, Pepe Seguí, Laia Torrents y Oriol Luna, emprendió a inicios del 2012, cuando recorrieron algunos mercados de la Ciudad de México en busca de nuevos instrumentos musicales(mercados como lagunilla,merced,sonora,santa martha etc.).
 		</item>
 		<item>cabo san roque en concierto|Viernes|18:40|19:20|carpa cabo san roque|Experimentacion Ludica|Cabo San Roque|Cabo San Roque</item>
+				<item>
+              centavrvs|Viernes|14:00|14:25|indio|Electronica Regional Mexicana|“Soñé que hacíamos un tributo a la Revolución Mexicana pero acá bien hyper electrónico.”
+              Asi es como Demián y  DJ Rayo definen sus inicios, sobre una plataforma de musica electronica, centavrvs es un proyecto musical 
+              donde el folclore y la cultura popular mexicana se fusionan con diversos ritmos como la cumbia, la chicha, el afrobeat, los sonidos tribales y brasileños.
+              Su primer EP de nombre Pacifico se dio a conocer en el verano del 2012, tambien hicieron con CONACULTA un CDD con corridos de la revolucion con canciones como La carcel de Cananea.
+              |Centavrvs nació en la mente de Demián y con el paso del tiempo se materializó con DJ Rayo y Luca Ortega (San Pascualito Rey).
+              “Considero que es mejor hacer las cosas con lo que tienes, a nunca hacerlas. Te puedes esperar y ahorrar para un estudio bien chingón, pero igual nunca pasará. 
+              Es un aprendizaje muy cabrón.” 
+        </item>
+		
 		<item>
 		    comisario pantera|Viernes|17:40|18:10|carpa danup|Rock
 		    |Provenientes de Milpa Alta, Distrito Federal, Comisario Pantera se forma en el 2005 por la inquietud de 3 jóvenes encontrados en la prepa 1 en xochimilco, descubren que tiene talento en un festival de catorce de febrero. Lo integran cuatro jóvenes: Dario Vital (guitarra y voz), Iván Vidauri (bajo y voz), Hernan Raúl "Piojo" (Batería y Coros) y Roger Dávila (Guitarra y Coros)
@@ -338,6 +305,14 @@
 		    Dildo ha sido en los últimos años una de las bandas independientes más fructíferas por seguir contando con un interesante récord de shows tanto en México como en el extranjero. 
 		    Con 5 discos de estudio DILDO,MODJO,VENTURA,POR ENCIMA,PRIMARIO
 		    |Por primera vez Dildo tocó fuera del país a través de una gira que abarcó más de 14 fechas por Estados Unidos, incluyendo un show como estelares en el Roxy de Los Angeles, escenario que ha tenido a personalidades de la talla de The Doors o David Bowie. 
+		</item>
+		<item>
+		    enjambre|Viernes|22:00|23:00|carpa danup|Rock|Enjambre es una banda de rock contemporaneo con algunos chispazos de baladas sesenteras y setenteras. 
+		    Es formada en un principio por los hermanos Luis (vocalista) y Rafael Navejas (bajista), lanzan su primer disco en el 2005 con el nombre de Consuelo en domingo.
+		    Mas adelante se integran el hermano menor de los navejas, Julian (tecladista) asi como Angel Sanchez (bateria) y Javier Mejia (guitarra).
+		    Sacan su segundo album en el 2008 llamado Felino, aunque es hasta finales del 2010 que consigue firmar con EMI, es entonces cuando da a luz Daltonico su tercer album con una gran aceptacion 
+		    del publico y ya no tan solo en el ambito "indie" si no tambien difundida en medios de comunicacion masiva.
+		    El añor anterior (2012) lanzan su cuarto album titulado Huespedes del Orbe.| En el primer album son los dos hermanos zacatecanos quienes se dan a conocer en California USA, es hasta el segundo cuando el hermano menor asi como los dos amigos de la infancia se agregan al grupo para ser el enjambre que hoy en dia conocemos.
 		</item>
 		<item>estrambóticos|Viernes|14:30|15:00|indio|No disponible|No disponible|No disponible</item>
 		<item>
@@ -424,6 +399,15 @@
 		    ocean’s acoustic|Viernes|14:40|15:10|carpa intolerante|Folk-Rock
 		    |ocean\'s acoustic está formado por tres multi-instrumentistas: emilio anaya, rubén rodríguez y adán díaz de león, quienes para fines de cada canción intercambian instrumentos acústicos como guitarra, violín, ukulele, mandolina, banjo, acordeón, melódica, saxofón y percusiones mínimas. su música puede ser descrita como folk rock, la cual ha sido inspirada de manera fundamental por la escena de folk británica, que incluye artistas como mumford &amp; sons, noah and the whale y johnny flynn. 
 		    |para ocean\'s acoustic no es su principal interés crear o formar parte de una escena en torno a este género en méxico, sino constituir una comunidad de personas sensibles a su música, que bien incluso puede ser mucho más diversa que una escena como tal. es así como la sencillez y sinceridad con la que se comunican con la gente les ha generado una sólida base de seguidores.
+		</item>
+		<item>
+		    pegasvs|Viernes|14:20|14:45|unión indio|Electronica|Duo formado por Sergio y Luciana,
+		    Ex-miembros de grupos underground de Barcelona como Thelematicos y Sibyl Vane, se unieron para formar Pegasvs y demostrar que "aún hay esperanza para la música electrónica con alma".
+		    Sus referentes son los grupos alemanes de krautrock de los 70\'s y pop "ensoñador".
+		    juntos han facturado un disco repleto de cañonazos de retropop con una sala de máquinas de todo tipo.
+		    Con su primer disco Pegasvs nos traen rolas muy buenas como son "La melodia del afilador" o "El final de la noche". |
+		    Sergio hizo música hardcore, punk, bluegrass en bandas como Thelemáticos, Anticonceptivas o incluso The Sad Believers, entre muchos otros proyectos.
+		    Luciana participó en los primeros, pero tambien en la banda Sibyl Vane.    
 		</item>
 		<item>
 		    poly miller|Viernes|17:50|18:40|carpa sonidero doritos|Electronica
